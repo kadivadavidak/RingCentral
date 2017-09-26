@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="500a4889b9ed4b5881941cd0509f4a71" Name="Diagram1">
+        <EntityTypeShape EntityType="TechBrandsModel.AdjustmentDescription" Width="1.5" PointX="8" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.AdjustmentType" Width="1.5" PointX="8" PointY="56.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Alias" Width="1.5" PointX="10.25" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.AliasType" Width="1.5" PointX="8" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Calendar" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CalendarType" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Collection" Width="1.5" PointX="3.75" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CustomerAddress" Width="1.5" PointX="3" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CustomerContact" Width="1.5" PointX="3" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Customer" Width="1.5" PointX="3" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CustomerTimeline" Width="1.5" PointX="5.25" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DataType" Width="1.5" PointX="5.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerCodeCharacteristic" Width="1.5" PointX="18.5" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerCodeCharacteristicType" Width="1.5" PointX="16.25" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerCode" Width="1.5" PointX="13.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerCodeStatu" Width="1.5" PointX="11" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerCodeType" Width="1.5" PointX="11" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerHierarchy" Width="1.5" PointX="18.5" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerHierarchyLevel" Width="1.5" PointX="16.25" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DealerHierarchyName" Width="1.5" PointX="16.25" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DefinitionHierarchy" Width="1.5" PointX="13.25" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Definition" Width="1.5" PointX="10" PointY="68.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DivisionAdjustment" Width="1.5" PointX="17.25" PointY="61.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Division" Width="1.5" PointX="0.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Element" Width="1.5" PointX="10" PointY="71.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeAdjustment" Width="1.5" PointX="15.25" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Employee" Width="1.5" PointX="3" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeStatu" Width="1.5" PointX="0.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeStatusHistory" Width="1.5" PointX="14.25" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeTimeDetail" Width="1.5" PointX="16.25" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Entity" Width="1.5" PointX="6" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EntityElement" Width="1.5" PointX="12.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EntityHistory" Width="1.5" PointX="12.25" PointY="64" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EntityRelationshipHistory" Width="1.5" PointX="8.25" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EntityRelationship" Width="1.5" PointX="11.25" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.GoalDescription" Width="1.5" PointX="8" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Goal" Width="1.5" PointX="10.25" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.GoalWeight" Width="1.5" PointX="8" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.HierarchyLevel" Width="1.5" PointX="14" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.HierarchyName" Width="1.5" PointX="14" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.HistoryType" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Interval" Width="1.5" PointX="16.25" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Inventory" Width="1.5" PointX="5.25" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.InventoryIdentificationCode" Width="1.5" PointX="3" PointY="68.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.InvoiceActivity" Width="1.5" PointX="13.25" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.InvoiceAdjustment" Width="1.5" PointX="9.75" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Invoice" Width="1.5" PointX="7.5" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.LineItem" Width="1.5" PointX="16.5" PointY="50.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.LineItemType" Width="1.5" PointX="14.25" PointY="60.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Location" Width="1.5" PointX="5.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.MetricDescription" Width="1.5" PointX="16.25" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Metric" Width="1.5" PointX="18.5" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Origin" Width="1.5" PointX="5.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Process" Width="1.5" PointX="5.75" PointY="72.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RelationshipDefinition" Width="1.5" PointX="6" PointY="62.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Sku" Width="1.5" PointX="3" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Status" Width="1.5" PointX="3.75" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StatusProcess" Width="1.5" PointX="8" PointY="59.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StatusStatusType" Width="1.5" PointX="6" PointY="69.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StatusType" Width="1.5" PointX="3.75" PointY="75.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreAdjustment" Width="1.5" PointX="10.25" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreCharacteristic" Width="1.5" PointX="13.25" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreCharacteristicType" Width="1.5" PointX="11" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreHierarchy" Width="1.5" PointX="16.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreHistory" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Store" Width="1.5" PointX="8" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreStatu" Width="1.5" PointX="5.75" PointY="59.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.TrafficDetail" Width="1.5" PointX="10.25" PointY="55.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Vendor" Width="1.5" PointX="3" PointY="59.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.WeightType" Width="1.5" PointX="5.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Traffic" Width="1.5" PointX="10.25" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.AccountLevel" Width="1.5" PointX="3.75" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CostCenter" Width="1.5" PointX="6" PointY="49.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.FTE" Width="1.5" PointX="10.25" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.GLAccountDetail" Width="1.5" PointX="8.25" PointY="64.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.GLAccountType" Width="1.5" PointX="6" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.TBAccount" Width="1.5" PointX="3" PointY="71.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeCharacteristic" Width="1.5" PointX="5.25" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeCharacteristicType" Width="1.5" PointX="3" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.AddressAbbr" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CarrierDealerCode" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.CarrierMetric" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.DailyPayByStore" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Employees1" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeSalesKPI" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.EmployeeSalesKPIs2" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.GoalsByDay" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.SalesCouponDetail" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.SalesDetail" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.SalesKPI" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.SisenseInvoiceFlag" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Skus1" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.Stores1" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.StoreSalesKPI" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RQCardType" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RQEntryType" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RQLocation" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RQRequestType" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TechBrandsModel.RQSalesDetail" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TechBrandsModel.FK_DivisionAdjustments_AdjustmentDescriptions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreAdjustments_AdjustmentDescriptions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DivisionAdjustments_AdjustmentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeAdjustment_EmployeeAdjustmentType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreAdjustments_AdjustmentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Alias_AliasType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Alias_Store1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Calendar_CalendarTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DefinitionRelationships_Collections" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Entities_Collections" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityHistories_Collections" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_RelationshipDefinitions_Collections" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_RelationshipDefinitions_Collections1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CustomerTimeline_CustomerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CustomerTimeline_CustomerContact" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Customers_Divisions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CustomerTimeline_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Invoices_CustomerTimeline" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_GoalDescriptions_DataTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_MetricDescriptions_DataTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodeCharacteristics_DealerCodeCharacteristicType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodeCharacteristics_DealerCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodes_DealerCodeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodes_DealerCodeType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodes_Origin" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerCodes_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerHierarchy_DealerCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Metrics_DealerCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerHierarchy_DealerHierarchyLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DealerHierarchy_DealerHierarchyName" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DefinitionRelationships_Definitions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_DefinitionRelationships_Definitions1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityHistories_Definitions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityValues_Definitions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CostCenters_Divisions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Employee_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Entities_Divisions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Skus_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Store_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_TBAccounts_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityHistories_Values" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityValues_Values" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeAdjustment_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeAdjustment_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Employee_EmployeeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Employee_Origin" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Employee_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeCharacteristics_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeStatusHistory_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeTimeDetails_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_InvoiceActivity_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_InvoiceAdjustments_Employee_EmployeeID" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreHierarchy_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeStatusHistory_EmployeeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeTimeDetails_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Entities_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationshipHistories_Entities" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationshipHistories_Entities1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationships_Entities" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationships_Entities1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityValues_Entities" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationshipHistories_RelationshipDefinitions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EntityRelationships_RelationshipDefinitions" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Goals_GoalDescription" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Goals_GoalWeight" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Goals_Store1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_GoalWeight_WeightType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CostCenters_HierarchyLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreHierarchy_HierarchyLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CostCenters_HierarchyNames" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreHierarchy_HierarchyName" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreHistory_HistoryType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Metrics_Intervals" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_InventoryIdentificationCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_InventoryIdentificationCodes1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_InventoryIdentificationCodes2" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_InventoryIdentificationCodes3" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_Skus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Inventory_Vendors" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_InvoiceActivity_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_InvoiceActivity_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_LineItem_InvoiceActivity" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_InvoiceAdjustments_Invoice_InvoiceID" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_LineItems_LineItemTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_LineItems_Skus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Store_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreCharacteristics_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Metrics_MetricDesc" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Store_Origin" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StatusProcesses_Processes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StatusProcesses_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StatusTypes_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StatusStatusTypes_StatusTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StorePerformanceAdjustments_Store1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreCharacteristics_Store1" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreCharacteristics_StoreCharacteristicType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_StoreHierarchy_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_FTE_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Store_StoreStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_Traffic_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_TrafficDetail_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_CostCenters_AccountLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_GLAccountDetail_CostCenters" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_GLAccountDetail_GLAccountType" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_GLAccountDetail_TBAccounts" ManuallyRouted="false" />
+        <AssociationConnector Association="TechBrandsModel.FK_EmployeeCharacteristics_EmployeeCharacteristicType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TechBrandsModelStoreContainer" CdmEntityContainer="TechBrandsContext">
+    <EntitySetMapping Name="AdjustmentDescriptions">
+      <EntityTypeMapping TypeName="TechBrandsModel.AdjustmentDescription">
+        <MappingFragment StoreEntitySet="AdjustmentDescriptions">
+          <ScalarProperty Name="AdjustmentDescriptionID" ColumnName="AdjustmentDescriptionID" />
+          <ScalarProperty Name="AdjustmentDescription1" ColumnName="AdjustmentDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdjustmentTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.AdjustmentType">
+        <MappingFragment StoreEntitySet="AdjustmentTypes">
+          <ScalarProperty Name="AdjustmentTypeID" ColumnName="AdjustmentTypeID" />
+          <ScalarProperty Name="AdjustmentType1" ColumnName="AdjustmentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aliases">
+      <EntityTypeMapping TypeName="TechBrandsModel.Alias">
+        <MappingFragment StoreEntitySet="Aliases">
+          <ScalarProperty Name="AliasID" ColumnName="AliasID" />
+          <ScalarProperty Name="Alias1" ColumnName="Alias" />
+          <ScalarProperty Name="AliasTypeID" ColumnName="AliasTypeID" />
+          <ScalarProperty Name="AliasDate" ColumnName="AliasDate" />
+          <ScalarProperty Name="AliasOrder" ColumnName="AliasOrder" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AliasTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.AliasType">
+        <MappingFragment StoreEntitySet="AliasTypes">
+          <ScalarProperty Name="AliasTypeID" ColumnName="AliasTypeID" />
+          <ScalarProperty Name="AliasType1" ColumnName="AliasType" />
+          <ScalarProperty Name="AliasTypeDesc" ColumnName="AliasTypeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calendars">
+      <EntityTypeMapping TypeName="TechBrandsModel.Calendar">
+        <MappingFragment StoreEntitySet="Calendar">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DayName" ColumnName="DayName" />
+          <ScalarProperty Name="WeekDay" ColumnName="WeekDay" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="WeekStart" ColumnName="WeekStart" />
+          <ScalarProperty Name="WeekFinish" ColumnName="WeekFinish" />
+          <ScalarProperty Name="WeekRange" ColumnName="WeekRange" />
+          <ScalarProperty Name="WeekRangeShort" ColumnName="WeekRangeShort" />
+          <ScalarProperty Name="MonthWeek" ColumnName="MonthWeek" />
+          <ScalarProperty Name="MonthDay" ColumnName="MonthDay" />
+          <ScalarProperty Name="DaysInMonth" ColumnName="DaysInMonth" />
+          <ScalarProperty Name="DaysLeftInMonth" ColumnName="DaysLeftInMonth" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="MonthNameAbbr" ColumnName="MonthNameAbbr" />
+          <ScalarProperty Name="MonthYear" ColumnName="MonthYear" />
+          <ScalarProperty Name="Quarter" ColumnName="Quarter" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="QuarterWeek" ColumnName="QuarterWeek" />
+          <ScalarProperty Name="QuarterDay" ColumnName="QuarterDay" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="YearDay" ColumnName="YearDay" />
+          <ScalarProperty Name="WeekRank" ColumnName="WeekRank" />
+          <ScalarProperty Name="MonthRank" ColumnName="MonthRank" />
+          <ScalarProperty Name="QuarterRank" ColumnName="QuarterRank" />
+          <ScalarProperty Name="CalendarTypeID" ColumnName="CalendarTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalendarTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.CalendarType">
+        <MappingFragment StoreEntitySet="CalendarTypes">
+          <ScalarProperty Name="CalendarTypeID" ColumnName="CalendarTypeID" />
+          <ScalarProperty Name="CalendarType1" ColumnName="CalendarType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collections">
+      <EntityTypeMapping TypeName="TechBrandsModel.Collection">
+        <MappingFragment StoreEntitySet="Collections">
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="Collection1" ColumnName="Collection" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerAddresses">
+      <EntityTypeMapping TypeName="TechBrandsModel.CustomerAddress">
+        <MappingFragment StoreEntitySet="CustomerAddress">
+          <ScalarProperty Name="CustomerAddressID" ColumnName="CustomerAddressID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerContacts">
+      <EntityTypeMapping TypeName="TechBrandsModel.CustomerContact">
+        <MappingFragment StoreEntitySet="CustomerContact">
+          <ScalarProperty Name="CustomerContactID" ColumnName="CustomerContactID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="TechBrandsModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="AltName" ColumnName="AltName" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="DoNotContact" ColumnName="DoNotContact" />
+          <ScalarProperty Name="POSIntID" ColumnName="POSIntID" />
+          <ScalarProperty Name="POSGuidID" ColumnName="POSGuidID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTimelines">
+      <EntityTypeMapping TypeName="TechBrandsModel.CustomerTimeline">
+        <MappingFragment StoreEntitySet="CustomerTimeline">
+          <ScalarProperty Name="CustomerTimelineID" ColumnName="CustomerTimelineID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerContactID" ColumnName="CustomerContactID" />
+          <ScalarProperty Name="CustomerAddressID" ColumnName="CustomerAddressID" />
+          <ScalarProperty Name="TimelineDate" ColumnName="TimelineDate" />
+          <ScalarProperty Name="TimelineOrder" ColumnName="TimelineOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.DataType">
+        <MappingFragment StoreEntitySet="DataTypes">
+          <ScalarProperty Name="DataTypeID" ColumnName="DataTypeID" />
+          <ScalarProperty Name="DataType1" ColumnName="DataType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerCodeCharacteristics">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerCodeCharacteristic">
+        <MappingFragment StoreEntitySet="DealerCodeCharacteristics">
+          <ScalarProperty Name="DCCharacteristicID" ColumnName="DCCharacteristicID" />
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="DCCharacteristicTypeID" ColumnName="DCCharacteristicTypeID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerCodeCharacteristicTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerCodeCharacteristicType">
+        <MappingFragment StoreEntitySet="DealerCodeCharacteristicTypes">
+          <ScalarProperty Name="DCCharacteristicTypeID" ColumnName="DCCharacteristicTypeID" />
+          <ScalarProperty Name="DCCharacteristic" ColumnName="DCCharacteristic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerCodes">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerCode">
+        <MappingFragment StoreEntitySet="DealerCodes">
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="DealerCode1" ColumnName="DealerCode" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="AcctStoreID" ColumnName="AcctStoreID" />
+          <ScalarProperty Name="DealerCodeTypeID" ColumnName="DealerCodeTypeID" />
+          <ScalarProperty Name="AcquisitionOriginID" ColumnName="AcquisitionOriginID" />
+          <ScalarProperty Name="DealerCodeOrigin" ColumnName="DealerCodeOrigin" />
+          <ScalarProperty Name="StoreOriginType" ColumnName="StoreOriginType" />
+          <ScalarProperty Name="DealerCodeStatusID" ColumnName="DealerCodeStatusID" />
+          <ScalarProperty Name="DealerCodeOrder" ColumnName="DealerCodeOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerCodeStatus">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerCodeStatu">
+        <MappingFragment StoreEntitySet="DealerCodeStatus">
+          <ScalarProperty Name="DealerCodeStatusID" ColumnName="DealerCodeStatusID" />
+          <ScalarProperty Name="DealerCodeStatus" ColumnName="DealerCodeStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerCodeTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerCodeType">
+        <MappingFragment StoreEntitySet="DealerCodeTypes">
+          <ScalarProperty Name="DealerCodeTypeID" ColumnName="DealerCodeTypeID" />
+          <ScalarProperty Name="DealerCodeType1" ColumnName="DealerCodeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerHierarchies">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerHierarchy">
+        <MappingFragment StoreEntitySet="DealerHierarchies">
+          <ScalarProperty Name="DealerHierarchyID" ColumnName="DealerHierarchyID" />
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="DealerHierarchyNameID" ColumnName="DealerHierarchyNameID" />
+          <ScalarProperty Name="DealerHierarchyLevelID" ColumnName="DealerHierarchyLevelID" />
+          <ScalarProperty Name="DealerHierarchyParentNameID" ColumnName="DealerHierarchyParentNameID" />
+          <ScalarProperty Name="DealerHierarchyDate" ColumnName="DealerHierarchyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerHierarchyLevels">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerHierarchyLevel">
+        <MappingFragment StoreEntitySet="DealerHierarchyLevels">
+          <ScalarProperty Name="DealerHierarchyLevelID" ColumnName="DealerHierarchyLevelID" />
+          <ScalarProperty Name="DealerHierarchyLevelName" ColumnName="DealerHierarchyLevelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerHierarchyNames">
+      <EntityTypeMapping TypeName="TechBrandsModel.DealerHierarchyName">
+        <MappingFragment StoreEntitySet="DealerHierarchyNames">
+          <ScalarProperty Name="DealerHierarchyNameID" ColumnName="DealerHierarchyNameID" />
+          <ScalarProperty Name="DealerHierarchyName1" ColumnName="DealerHierarchyName" />
+          <ScalarProperty Name="DealerHierarchyAbbr" ColumnName="DealerHierarchyAbbr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefinitionHierarchies">
+      <EntityTypeMapping TypeName="TechBrandsModel.DefinitionHierarchy">
+        <MappingFragment StoreEntitySet="DefinitionHierarchies">
+          <ScalarProperty Name="DefinitionHierarchyID" ColumnName="DefinitionHierarchyID" />
+          <ScalarProperty Name="ParentDefinitionID" ColumnName="ParentDefinitionID" />
+          <ScalarProperty Name="ChildDefinitionID" ColumnName="ChildDefinitionID" />
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Definitions">
+      <EntityTypeMapping TypeName="TechBrandsModel.Definition">
+        <MappingFragment StoreEntitySet="Definitions">
+          <ScalarProperty Name="DefinitionID" ColumnName="DefinitionID" />
+          <ScalarProperty Name="Definition1" ColumnName="Definition" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DivisionAdjustments">
+      <EntityTypeMapping TypeName="TechBrandsModel.DivisionAdjustment">
+        <MappingFragment StoreEntitySet="DivisionAdjustments">
+          <ScalarProperty Name="DivisionAdjustmentID" ColumnName="DivisionAdjustmentID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AdjustmentDescriptionID" ColumnName="AdjustmentDescriptionID" />
+          <ScalarProperty Name="AdjustmentTypeID" ColumnName="AdjustmentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Divisions">
+      <EntityTypeMapping TypeName="TechBrandsModel.Division">
+        <MappingFragment StoreEntitySet="Divisions">
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="Division1" ColumnName="Division" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elements">
+      <EntityTypeMapping TypeName="TechBrandsModel.Element">
+        <MappingFragment StoreEntitySet="Elements">
+          <ScalarProperty Name="ElementID" ColumnName="ElementID" />
+          <ScalarProperty Name="ElementHash" ColumnName="ElementHash" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeAdjustments">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeAdjustment">
+        <MappingFragment StoreEntitySet="EmployeeAdjustments">
+          <ScalarProperty Name="EmployeeAdjustmentID" ColumnName="EmployeeAdjustmentID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+          <ScalarProperty Name="AdjustmentTypeID" ColumnName="AdjustmentTypeID" />
+          <ScalarProperty Name="AdjustmentDate" ColumnName="AdjustmentDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="TechBrandsModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="PosID" ColumnName="PosID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="PrimaryStoreID" ColumnName="PrimaryStoreID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+          <ScalarProperty Name="OriginID" ColumnName="OriginID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeStatus">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeStatu">
+        <MappingFragment StoreEntitySet="EmployeeStatus">
+          <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+          <ScalarProperty Name="EmployeeStatus" ColumnName="EmployeeStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeStatusHistories">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeStatusHistory">
+        <MappingFragment StoreEntitySet="EmployeeStatusHistories">
+          <ScalarProperty Name="EmployeeStatusHistoryID" ColumnName="EmployeeStatusHistoryID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+          <ScalarProperty Name="StatusOrder" ColumnName="StatusOrder" />
+          <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTimeDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeTimeDetail">
+        <MappingFragment StoreEntitySet="EmployeeTimeDetails">
+          <ScalarProperty Name="EmployeeTimeDetailID" ColumnName="EmployeeTimeDetailID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="ClockIn" ColumnName="ClockIn" />
+          <ScalarProperty Name="ClockOut" ColumnName="ClockOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="TechBrandsModel.Entity">
+        <MappingFragment StoreEntitySet="Entities">
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="EntityImportKey" ColumnName="EntityImportKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityElements">
+      <EntityTypeMapping TypeName="TechBrandsModel.EntityElement">
+        <MappingFragment StoreEntitySet="EntityElements">
+          <ScalarProperty Name="EntityElementID" ColumnName="EntityElementID" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="DefinitionID" ColumnName="DefinitionID" />
+          <ScalarProperty Name="ElementID" ColumnName="ElementID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityHistories">
+      <EntityTypeMapping TypeName="TechBrandsModel.EntityHistory">
+        <MappingFragment StoreEntitySet="EntityHistories">
+          <ScalarProperty Name="EntityHistoryID" ColumnName="EntityHistoryID" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="ElementID" ColumnName="ElementID" />
+          <ScalarProperty Name="DefinitionID" ColumnName="DefinitionID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityRelationshipHistories">
+      <EntityTypeMapping TypeName="TechBrandsModel.EntityRelationshipHistory">
+        <MappingFragment StoreEntitySet="EntityRelationshipHistories">
+          <ScalarProperty Name="EntityRelationshipHistoryID" ColumnName="EntityRelationshipHistoryID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="ChildEntityID" ColumnName="ChildEntityID" />
+          <ScalarProperty Name="RelationshipDefinitionID" ColumnName="RelationshipDefinitionID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityRelationships">
+      <EntityTypeMapping TypeName="TechBrandsModel.EntityRelationship">
+        <MappingFragment StoreEntitySet="EntityRelationships">
+          <ScalarProperty Name="EntityRelationshipID" ColumnName="EntityRelationshipID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="ChildEntityID" ColumnName="ChildEntityID" />
+          <ScalarProperty Name="RelationshipDefinitionID" ColumnName="RelationshipDefinitionID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoalDescriptions">
+      <EntityTypeMapping TypeName="TechBrandsModel.GoalDescription">
+        <MappingFragment StoreEntitySet="GoalDescriptions">
+          <ScalarProperty Name="GoalDescriptionID" ColumnName="GoalDescriptionID" />
+          <ScalarProperty Name="GoalDescription1" ColumnName="GoalDescription" />
+          <ScalarProperty Name="DataTypeID" ColumnName="DataTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goals">
+      <EntityTypeMapping TypeName="TechBrandsModel.Goal">
+        <MappingFragment StoreEntitySet="Goals">
+          <ScalarProperty Name="GoalID" ColumnName="GoalID" />
+          <ScalarProperty Name="GoalDescriptionID" ColumnName="GoalDescriptionID" />
+          <ScalarProperty Name="GoalDate" ColumnName="GoalDate" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Goal1" ColumnName="Goal" />
+          <ScalarProperty Name="GoalWeightID" ColumnName="GoalWeightID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoalWeights">
+      <EntityTypeMapping TypeName="TechBrandsModel.GoalWeight">
+        <MappingFragment StoreEntitySet="GoalWeights">
+          <ScalarProperty Name="GoalWeightID" ColumnName="GoalWeightID" />
+          <ScalarProperty Name="GoalWeight1" ColumnName="GoalWeight" />
+          <ScalarProperty Name="WeightTypeID" ColumnName="WeightTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HierarchyLevels">
+      <EntityTypeMapping TypeName="TechBrandsModel.HierarchyLevel">
+        <MappingFragment StoreEntitySet="HierarchyLevels">
+          <ScalarProperty Name="HierarchyLevelID" ColumnName="HierarchyLevelID" />
+          <ScalarProperty Name="HierarchyLevelName" ColumnName="HierarchyLevelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HierarchyNames">
+      <EntityTypeMapping TypeName="TechBrandsModel.HierarchyName">
+        <MappingFragment StoreEntitySet="HierarchyNames">
+          <ScalarProperty Name="HierarchyNameID" ColumnName="HierarchyNameID" />
+          <ScalarProperty Name="HierarchyName1" ColumnName="HierarchyName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoryTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.HistoryType">
+        <MappingFragment StoreEntitySet="HistoryTypes">
+          <ScalarProperty Name="HistoryTypeID" ColumnName="HistoryTypeID" />
+          <ScalarProperty Name="HistoryType1" ColumnName="HistoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Intervals">
+      <EntityTypeMapping TypeName="TechBrandsModel.Interval">
+        <MappingFragment StoreEntitySet="Intervals">
+          <ScalarProperty Name="IntervalID" ColumnName="IntervalID" />
+          <ScalarProperty Name="Interval1" ColumnName="Interval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="TechBrandsModel.Inventory">
+        <MappingFragment StoreEntitySet="Inventory">
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="SerialNumberID" ColumnName="SerialNumberID" />
+          <ScalarProperty Name="VendorPNID" ColumnName="VendorPNID" />
+          <ScalarProperty Name="ManufacturerPNID" ColumnName="ManufacturerPNID" />
+          <ScalarProperty Name="BarcodeID" ColumnName="BarcodeID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CostPerUnit" ColumnName="CostPerUnit" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryIdentificationCodes">
+      <EntityTypeMapping TypeName="TechBrandsModel.InventoryIdentificationCode">
+        <MappingFragment StoreEntitySet="InventoryIdentificationCodes">
+          <ScalarProperty Name="InventoryIdentificationCodeID" ColumnName="InventoryIdentificationCodeID" />
+          <ScalarProperty Name="InventoryIdentificationCode1" ColumnName="InventoryIdentificationCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceActivities">
+      <EntityTypeMapping TypeName="TechBrandsModel.InvoiceActivity">
+        <MappingFragment StoreEntitySet="InvoiceActivities">
+          <ScalarProperty Name="InvoiceActivityID" ColumnName="InvoiceActivityID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="ActivityDateTime" ColumnName="ActivityDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceAdjustments">
+      <EntityTypeMapping TypeName="TechBrandsModel.InvoiceAdjustment">
+        <MappingFragment StoreEntitySet="InvoiceAdjustments">
+          <ScalarProperty Name="InvoiceAdjustmentID" ColumnName="InvoiceAdjustmentID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="AdjustmentDate" ColumnName="AdjustmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="TechBrandsModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoices">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="CustomerTimelineID" ColumnName="CustomerTimelineID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineItems">
+      <EntityTypeMapping TypeName="TechBrandsModel.LineItem">
+        <MappingFragment StoreEntitySet="LineItems">
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="InvoiceActivityID" ColumnName="InvoiceActivityID" />
+          <ScalarProperty Name="LineItemOrder" ColumnName="LineItemOrder" />
+          <ScalarProperty Name="LineReferenceID" ColumnName="LineReferenceID" />
+          <ScalarProperty Name="LineItemTypeID" ColumnName="LineItemTypeID" />
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Profit" ColumnName="Profit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineItemTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.LineItemType">
+        <MappingFragment StoreEntitySet="LineItemTypes">
+          <ScalarProperty Name="LineItemTypeID" ColumnName="LineItemTypeID" />
+          <ScalarProperty Name="LineItemType1" ColumnName="LineItemType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="TechBrandsModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddressHash" ColumnName="AddressHash" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Timezone" ColumnName="Timezone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetricDescriptions">
+      <EntityTypeMapping TypeName="TechBrandsModel.MetricDescription">
+        <MappingFragment StoreEntitySet="MetricDescriptions">
+          <ScalarProperty Name="MetricDescriptionID" ColumnName="MetricDescriptionID" />
+          <ScalarProperty Name="MetricDescription1" ColumnName="MetricDescription" />
+          <ScalarProperty Name="DataTypeID" ColumnName="DataTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metrics">
+      <EntityTypeMapping TypeName="TechBrandsModel.Metric">
+        <MappingFragment StoreEntitySet="Metrics">
+          <ScalarProperty Name="MetricID" ColumnName="MetricID" />
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="MetricDescriptionID" ColumnName="MetricDescriptionID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="MetricValue" ColumnName="MetricValue" />
+          <ScalarProperty Name="IntervalID" ColumnName="IntervalID" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Origins">
+      <EntityTypeMapping TypeName="TechBrandsModel.Origin">
+        <MappingFragment StoreEntitySet="Origins">
+          <ScalarProperty Name="OriginID" ColumnName="OriginID" />
+          <ScalarProperty Name="Origin1" ColumnName="Origin" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Processes">
+      <EntityTypeMapping TypeName="TechBrandsModel.Process">
+        <MappingFragment StoreEntitySet="Processes">
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="Process1" ColumnName="Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelationshipDefinitions">
+      <EntityTypeMapping TypeName="TechBrandsModel.RelationshipDefinition">
+        <MappingFragment StoreEntitySet="RelationshipDefinitions">
+          <ScalarProperty Name="RelationshipDefinitionID" ColumnName="RelationshipDefinitionID" />
+          <ScalarProperty Name="RelationshipDefinition1" ColumnName="RelationshipDefinition" />
+          <ScalarProperty Name="ParentCollectionID" ColumnName="ParentCollectionID" />
+          <ScalarProperty Name="ChildCollectionID" ColumnName="ChildCollectionID" />
+          <ScalarProperty Name="AllowMultipleParents" ColumnName="AllowMultipleParents" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skus">
+      <EntityTypeMapping TypeName="TechBrandsModel.Sku">
+        <MappingFragment StoreEntitySet="Skus">
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="Sku1" ColumnName="Sku" />
+          <ScalarProperty Name="ParentProductID" ColumnName="ParentProductID" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductEnabled" ColumnName="ProductEnabled" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="LevelOne" ColumnName="LevelOne" />
+          <ScalarProperty Name="LevelTwo" ColumnName="LevelTwo" />
+          <ScalarProperty Name="LevelThree" ColumnName="LevelThree" />
+          <ScalarProperty Name="LevelFour" ColumnName="LevelFour" />
+          <ScalarProperty Name="LevelFive" ColumnName="LevelFive" />
+          <ScalarProperty Name="LevelSix" ColumnName="LevelSix" />
+          <ScalarProperty Name="LevelSeven" ColumnName="LevelSeven" />
+          <ScalarProperty Name="LevelEight" ColumnName="LevelEight" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="TechBrandsModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Status1" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusProcesses">
+      <EntityTypeMapping TypeName="TechBrandsModel.StatusProcess">
+        <MappingFragment StoreEntitySet="StatusProcesses">
+          <ScalarProperty Name="StatusProcessID" ColumnName="StatusProcessID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusStatusTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.StatusStatusType">
+        <MappingFragment StoreEntitySet="StatusStatusTypes">
+          <ScalarProperty Name="StatusStatusTypeID" ColumnName="StatusStatusTypeID" />
+          <ScalarProperty Name="StatusTypeID" ColumnName="StatusTypeID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.StatusType">
+        <MappingFragment StoreEntitySet="StatusTypes">
+          <ScalarProperty Name="StatusTypeID" ColumnName="StatusTypeID" />
+          <ScalarProperty Name="StatusType1" ColumnName="StatusType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreAdjustments">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreAdjustment">
+        <MappingFragment StoreEntitySet="StoreAdjustments">
+          <ScalarProperty Name="StoreAdjustmentID" ColumnName="StoreAdjustmentID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AdjustmentDescriptionID" ColumnName="AdjustmentDescriptionID" />
+          <ScalarProperty Name="AdjustmentTypeID" ColumnName="AdjustmentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreCharacteristics">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreCharacteristic">
+        <MappingFragment StoreEntitySet="StoreCharacteristics">
+          <ScalarProperty Name="StoreCharacteristicID" ColumnName="StoreCharacteristicID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StoreCharacteristicTypeID" ColumnName="StoreCharacteristicTypeID" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreCharacteristicTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreCharacteristicType">
+        <MappingFragment StoreEntitySet="StoreCharacteristicTypes">
+          <ScalarProperty Name="StoreCharacteristicTypeID" ColumnName="StoreCharacteristicTypeID" />
+          <ScalarProperty Name="StoreCharacteristicType1" ColumnName="StoreCharacteristicType" />
+          <ScalarProperty Name="StoreCharacteristicClass" ColumnName="StoreCharacteristicClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreHierarchies">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreHierarchy">
+        <MappingFragment StoreEntitySet="StoreHierarchies">
+          <ScalarProperty Name="StoreHierarchyID" ColumnName="StoreHierarchyID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="HierarchyNameID" ColumnName="HierarchyNameID" />
+          <ScalarProperty Name="HierarchyLevelID" ColumnName="HierarchyLevelID" />
+          <ScalarProperty Name="HierarchyParentNameID" ColumnName="HierarchyParentNameID" />
+          <ScalarProperty Name="HierarchyDate" ColumnName="HierarchyDate" />
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreHistories">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreHistory">
+        <MappingFragment StoreEntitySet="StoreHistories">
+          <ScalarProperty Name="StoreHistoryID" ColumnName="StoreHistoryID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="OriginID" ColumnName="OriginID" />
+          <ScalarProperty Name="StoreStatusID" ColumnName="StoreStatusID" />
+          <ScalarProperty Name="HistoryOrder" ColumnName="HistoryOrder" />
+          <ScalarProperty Name="HistoryTypeID" ColumnName="HistoryTypeID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="TechBrandsModel.Store">
+        <MappingFragment StoreEntitySet="Stores">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="StoreNumber" ColumnName="StoreNumber" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="StoreStatusID" ColumnName="StoreStatusID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="OriginID" ColumnName="OriginID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreStatus">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreStatu">
+        <MappingFragment StoreEntitySet="StoreStatus">
+          <ScalarProperty Name="StoreStatusID" ColumnName="StoreStatusID" />
+          <ScalarProperty Name="StoreStatus" ColumnName="StoreStatus" />
+          <ScalarProperty Name="StoreStatusType" ColumnName="StoreStatusType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TechBrandsModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrafficDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.TrafficDetail">
+        <MappingFragment StoreEntitySet="TrafficDetails">
+          <ScalarProperty Name="TrafficDetailID" ColumnName="TrafficDetailID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="TrafficDateTime" ColumnName="TrafficDateTime" />
+          <ScalarProperty Name="TrafficCount" ColumnName="TrafficCount" />
+          <ScalarProperty Name="TrafficType" ColumnName="TrafficType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendors">
+      <EntityTypeMapping TypeName="TechBrandsModel.Vendor">
+        <MappingFragment StoreEntitySet="Vendors">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Vendor1" ColumnName="Vendor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeightTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.WeightType">
+        <MappingFragment StoreEntitySet="WeightTypes">
+          <ScalarProperty Name="WeightTypeID" ColumnName="WeightTypeID" />
+          <ScalarProperty Name="WeightType1" ColumnName="WeightType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Traffic">
+      <EntityTypeMapping TypeName="TechBrandsModel.Traffic">
+        <MappingFragment StoreEntitySet="Traffic">
+          <ScalarProperty Name="TrafficID" ColumnName="TrafficID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="TrafficDate" ColumnName="TrafficDate" />
+          <ScalarProperty Name="TrafficCount" ColumnName="TrafficCount" />
+          <ScalarProperty Name="TrafficType" ColumnName="TrafficType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountLevels">
+      <EntityTypeMapping TypeName="TechBrandsModel.AccountLevel">
+        <MappingFragment StoreEntitySet="AccountLevels">
+          <ScalarProperty Name="AccountLevelID" ColumnName="AccountLevelID" />
+          <ScalarProperty Name="AccountLevel1" ColumnName="AccountLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostCenters">
+      <EntityTypeMapping TypeName="TechBrandsModel.CostCenter">
+        <MappingFragment StoreEntitySet="CostCenters">
+          <ScalarProperty Name="CostCenterID" ColumnName="CostCenterID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="HierarchyNameID" ColumnName="HierarchyNameID" />
+          <ScalarProperty Name="HierarchyLevelID" ColumnName="HierarchyLevelID" />
+          <ScalarProperty Name="CostCenter1" ColumnName="CostCenter" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="AccountLevelID" ColumnName="AccountLevelID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTEs">
+      <EntityTypeMapping TypeName="TechBrandsModel.FTE">
+        <MappingFragment StoreEntitySet="FTE">
+          <ScalarProperty Name="FTEID" ColumnName="FTEID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="NumberFTE" ColumnName="NumberFTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLAccountDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.GLAccountDetail">
+        <MappingFragment StoreEntitySet="GLAccountDetails">
+          <ScalarProperty Name="GLAccountDetailID" ColumnName="GLAccountDetailID" />
+          <ScalarProperty Name="CostCenterID" ColumnName="CostCenterID" />
+          <ScalarProperty Name="GLAccountTypeID" ColumnName="GLAccountTypeID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TBAccountID" ColumnName="TBAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLAccountTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.GLAccountType">
+        <MappingFragment StoreEntitySet="GLAccountTypes">
+          <ScalarProperty Name="GLAccountTypeID" ColumnName="GLAccountTypeID" />
+          <ScalarProperty Name="GLAccountType1" ColumnName="GLAccountType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBAccounts">
+      <EntityTypeMapping TypeName="TechBrandsModel.TBAccount">
+        <MappingFragment StoreEntitySet="TBAccounts">
+          <ScalarProperty Name="TBAccountID" ColumnName="TBAccountID" />
+          <ScalarProperty Name="TBAccount1" ColumnName="TBAccount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeCharacteristics">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeCharacteristic">
+        <MappingFragment StoreEntitySet="EmployeeCharacteristics">
+          <ScalarProperty Name="EmployeeCharacteristicsID" ColumnName="EmployeeCharacteristicsID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EmployeeCharacteristicTypeID" ColumnName="EmployeeCharacteristicTypeID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeCharacteristicTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeCharacteristicType">
+        <MappingFragment StoreEntitySet="EmployeeCharacteristicTypes">
+          <ScalarProperty Name="EmployeeCharacteristicTypeID" ColumnName="EmployeeCharacteristicTypeID" />
+          <ScalarProperty Name="EmployeeCharacteristicType1" ColumnName="EmployeeCharacteristicType" />
+          <ScalarProperty Name="EmployeeCharacteristicClass" ColumnName="EmployeeCharacteristicClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressAbbrs">
+      <EntityTypeMapping TypeName="TechBrandsModel.AddressAbbr">
+        <MappingFragment StoreEntitySet="AddressAbbr">
+          <ScalarProperty Name="AddressAbbrID" ColumnName="AddressAbbrID" />
+          <ScalarProperty Name="FindThis" ColumnName="FindThis" />
+          <ScalarProperty Name="ReplaceWith" ColumnName="ReplaceWith" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarrierDealerCodes">
+      <EntityTypeMapping TypeName="TechBrandsModel.CarrierDealerCode">
+        <MappingFragment StoreEntitySet="CarrierDealerCodes">
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="DealerCode" ColumnName="DealerCode" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="AcctStoreID" ColumnName="AcctStoreID" />
+          <ScalarProperty Name="DealerCodeType" ColumnName="DealerCodeType" />
+          <ScalarProperty Name="DealerCodeStatus" ColumnName="DealerCodeStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarrierMetrics">
+      <EntityTypeMapping TypeName="TechBrandsModel.CarrierMetric">
+        <MappingFragment StoreEntitySet="CarrierMetrics">
+          <ScalarProperty Name="MetricID" ColumnName="MetricID" />
+          <ScalarProperty Name="MetricType" ColumnName="MetricType" />
+          <ScalarProperty Name="MetricDescription" ColumnName="MetricDescription" />
+          <ScalarProperty Name="MetricValue" ColumnName="MetricValue" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DealerCode" ColumnName="DealerCode" />
+          <ScalarProperty Name="DealerCodeID" ColumnName="DealerCodeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="CarrierMetricType" ColumnName="CarrierMetricType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyPayByStores">
+      <EntityTypeMapping TypeName="TechBrandsModel.DailyPayByStore">
+        <MappingFragment StoreEntitySet="DailyPayByStore">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PayGroup" ColumnName="PayGroup" />
+          <ScalarProperty Name="Pay" ColumnName="Pay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees1">
+      <EntityTypeMapping TypeName="TechBrandsModel.Employees1">
+        <MappingFragment StoreEntitySet="Employees1">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="PrimaryStoreID" ColumnName="PrimaryStoreID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CommissionGroup" ColumnName="CommissionGroup" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="OrganizationRole" ColumnName="OrganizationRole" />
+          <ScalarProperty Name="SecurityRole" ColumnName="SecurityRole" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="WorkdayID" ColumnName="WorkdayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeSalesKPIs">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeSalesKPI">
+        <MappingFragment StoreEntitySet="EmployeeSalesKPIs">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="EmployeeStatus" ColumnName="EmployeeStatus" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="GrossProfit" ColumnName="GrossProfit" />
+          <ScalarProperty Name="Opps" ColumnName="Opps" />
+          <ScalarProperty Name="GrossAdds" ColumnName="GrossAdds" />
+          <ScalarProperty Name="Upgrades" ColumnName="Upgrades" />
+          <ScalarProperty Name="StrategicProducts" ColumnName="StrategicProducts" />
+          <ScalarProperty Name="DLife" ColumnName="DLife" />
+          <ScalarProperty Name="AdvancedTV" ColumnName="AdvancedTV" />
+          <ScalarProperty Name="CRU" ColumnName="CRU" />
+          <ScalarProperty Name="GoPhone" ColumnName="GoPhone" />
+          <ScalarProperty Name="AccessoryGP" ColumnName="AccessoryGP" />
+          <ScalarProperty Name="PostPaidGrossAdds" ColumnName="PostPaidGrossAdds" />
+          <ScalarProperty Name="Wired" ColumnName="Wired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeSalesKPIs2">
+      <EntityTypeMapping TypeName="TechBrandsModel.EmployeeSalesKPIs2">
+        <MappingFragment StoreEntitySet="EmployeeSalesKPIs2">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoalsByDays">
+      <EntityTypeMapping TypeName="TechBrandsModel.GoalsByDay">
+        <MappingFragment StoreEntitySet="GoalsByDay">
+          <ScalarProperty Name="GoalID" ColumnName="GoalID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DailyGoal" ColumnName="DailyGoal" />
+          <ScalarProperty Name="MonthlyGoal" ColumnName="MonthlyGoal" />
+          <ScalarProperty Name="GoalType" ColumnName="GoalType" />
+          <ScalarProperty Name="GoalDescription" ColumnName="GoalDescription" />
+          <ScalarProperty Name="GoalWeight" ColumnName="GoalWeight" />
+          <ScalarProperty Name="WeightType" ColumnName="WeightType" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesCouponDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.SalesCouponDetail">
+        <MappingFragment StoreEntitySet="SalesCouponDetail">
+          <ScalarProperty Name="InvoiceReferenceID" ColumnName="InvoiceReferenceID" />
+          <ScalarProperty Name="ActivityDateTime" ColumnName="ActivityDateTime" />
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="Profit" ColumnName="Profit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.SalesDetail">
+        <MappingFragment StoreEntitySet="SalesDetail">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceActivityID" ColumnName="InvoiceActivityID" />
+          <ScalarProperty Name="InvoiceReferenceID" ColumnName="InvoiceReferenceID" />
+          <ScalarProperty Name="ActivityDateTime" ColumnName="ActivityDateTime" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="Profit" ColumnName="Profit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ReferenceSkuID" ColumnName="ReferenceSkuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesKPIs">
+      <EntityTypeMapping TypeName="TechBrandsModel.SalesKPI">
+        <MappingFragment StoreEntitySet="SalesKPIs">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="GrossProfit" ColumnName="GrossProfit" />
+          <ScalarProperty Name="Opps" ColumnName="Opps" />
+          <ScalarProperty Name="GrossAdds" ColumnName="GrossAdds" />
+          <ScalarProperty Name="Upgrades" ColumnName="Upgrades" />
+          <ScalarProperty Name="StrategicProducts" ColumnName="StrategicProducts" />
+          <ScalarProperty Name="DLife" ColumnName="DLife" />
+          <ScalarProperty Name="AdvancedTV" ColumnName="AdvancedTV" />
+          <ScalarProperty Name="CRU" ColumnName="CRU" />
+          <ScalarProperty Name="GoPhone" ColumnName="GoPhone" />
+          <ScalarProperty Name="AccessoryGP" ColumnName="AccessoryGP" />
+          <ScalarProperty Name="PostPaidGrossAdds" ColumnName="PostPaidGrossAdds" />
+          <ScalarProperty Name="Wired" ColumnName="Wired" />
+          <ScalarProperty Name="Traffic" ColumnName="Traffic" />
+          <ScalarProperty Name="Wearables" ColumnName="Wearables" />
+          <ScalarProperty Name="UverseUnits" ColumnName="UverseUnits" />
+          <ScalarProperty Name="TotalPhones" ColumnName="TotalPhones" />
+          <ScalarProperty Name="TabletUnits" ColumnName="TabletUnits" />
+          <ScalarProperty Name="TabletData" ColumnName="TabletData" />
+          <ScalarProperty Name="Smartphones" ColumnName="Smartphones" />
+          <ScalarProperty Name="FeatUnits" ColumnName="FeatUnits" />
+          <ScalarProperty Name="RevenueNoCoupons" ColumnName="RevenueNoCoupons" />
+          <ScalarProperty Name="NonContract" ColumnName="NonContract" />
+          <ScalarProperty Name="Next" ColumnName="Next" />
+          <ScalarProperty Name="LG_G5" ColumnName="LG G5" />
+          <ScalarProperty Name="iOS" ColumnName="iOS" />
+          <ScalarProperty Name="IntegratedProducts" ColumnName="IntegratedProducts" />
+          <ScalarProperty Name="HYLA" ColumnName="HYLA" />
+          <ScalarProperty Name="GadgetGuardGP" ColumnName="GadgetGuardGP" />
+          <ScalarProperty Name="FeatureGP" ColumnName="FeatureGP" />
+          <ScalarProperty Name="DirecTVUnits" ColumnName="DirecTVUnits" />
+          <ScalarProperty Name="BYOD" ColumnName="BYOD" />
+          <ScalarProperty Name="AndroidUnits" ColumnName="AndroidUnits" />
+          <ScalarProperty Name="AllCoupons" ColumnName="AllCoupons" />
+          <ScalarProperty Name="AccessoryUnits" ColumnName="AccessoryUnits" />
+          <ScalarProperty Name="AccEligOpps" ColumnName="AccEligOpps" />
+          <ScalarProperty Name="AccessoryCoupons" ColumnName="AccessoryCoupons" />
+          <ScalarProperty Name="RawGrossProfit" ColumnName="RawGrossProfit" />
+          <ScalarProperty Name="NoniOSSmartPhones" ColumnName="NoniOSSmartPhones" />
+          <ScalarProperty Name="HSI" ColumnName="HSI" />
+          <ScalarProperty Name="MobileInsurance" ColumnName="MobileInsurance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SisenseInvoiceFlags">
+      <EntityTypeMapping TypeName="TechBrandsModel.SisenseInvoiceFlag">
+        <MappingFragment StoreEntitySet="SisenseInvoiceFlags">
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="SMServiceFlag" ColumnName="SMServiceFlag" />
+          <ScalarProperty Name="smMobilityiPadFlag" ColumnName="smMobilityiPadFlag" />
+          <ScalarProperty Name="smMobilityiPhoneFlag" ColumnName="smMobilityiPhoneFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skus1">
+      <EntityTypeMapping TypeName="TechBrandsModel.Skus1">
+        <MappingFragment StoreEntitySet="Skus1">
+          <ScalarProperty Name="SkuID" ColumnName="SkuID" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="ParentProductID" ColumnName="ParentProductID" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductEnabled" ColumnName="ProductEnabled" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="LevelOne" ColumnName="LevelOne" />
+          <ScalarProperty Name="LevelTwo" ColumnName="LevelTwo" />
+          <ScalarProperty Name="LevelThree" ColumnName="LevelThree" />
+          <ScalarProperty Name="LevelFour" ColumnName="LevelFour" />
+          <ScalarProperty Name="LevelFive" ColumnName="LevelFive" />
+          <ScalarProperty Name="LevelSix" ColumnName="LevelSix" />
+          <ScalarProperty Name="LevelSeven" ColumnName="LevelSeven" />
+          <ScalarProperty Name="LevelEight" ColumnName="LevelEight" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores1">
+      <EntityTypeMapping TypeName="TechBrandsModel.Stores1">
+        <MappingFragment StoreEntitySet="Stores1">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="Store" ColumnName="Store" />
+          <ScalarProperty Name="StoreNumber" ColumnName="StoreNumber" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Timezone" ColumnName="Timezone" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Backdoor" ColumnName="Backdoor" />
+          <ScalarProperty Name="Billpay" ColumnName="Billpay" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="DigitalLife" ColumnName="DigitalLife" />
+          <ScalarProperty Name="StoreType" ColumnName="StoreType" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="OpenSunday" ColumnName="OpenSunday" />
+          <ScalarProperty Name="Tier" ColumnName="Tier" />
+          <ScalarProperty Name="Uverse" ColumnName="Uverse" />
+          <ScalarProperty Name="Wired" ColumnName="Wired" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Market" ColumnName="Market" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="StoreStatus" ColumnName="StoreStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreSalesKPIs">
+      <EntityTypeMapping TypeName="TechBrandsModel.StoreSalesKPI">
+        <MappingFragment StoreEntitySet="StoreSalesKPIs">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RQCardTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.RQCardType">
+        <MappingFragment StoreEntitySet="RQCardTypes">
+          <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Mnemonic" ColumnName="Mnemonic" />
+          <ScalarProperty Name="AccountNumberLength" ColumnName="AccountNumberLength" />
+          <ScalarProperty Name="CvvLength" ColumnName="CvvLength" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RQEntryTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.RQEntryType">
+        <MappingFragment StoreEntitySet="RQEntryTypes">
+          <ScalarProperty Name="EntryTypeID" ColumnName="EntryTypeID" />
+          <ScalarProperty Name="EntryTypeDescription" ColumnName="EntryTypeDescription" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RQLocations">
+      <EntityTypeMapping TypeName="TechBrandsModel.RQLocation">
+        <MappingFragment StoreEntitySet="RQLocations">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="Disabled" ColumnName="Disabled" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="ManagerEmployeeID" ColumnName="ManagerEmployeeID" />
+          <ScalarProperty Name="ManagerCommissionable" ColumnName="ManagerCommissionable" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateProv" ColumnName="StateProv" />
+          <ScalarProperty Name="ZipPostal" ColumnName="ZipPostal" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="StoreType" ColumnName="StoreType" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="SquareFootage" ColumnName="SquareFootage" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="AddressVerified" ColumnName="AddressVerified" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="AdjustDST" ColumnName="AdjustDST" />
+          <ScalarProperty Name="CashPolicy" ColumnName="CashPolicy" />
+          <ScalarProperty Name="MaxCashDrawer" ColumnName="MaxCashDrawer" />
+          <ScalarProperty Name="Serial_on_OE" ColumnName="Serial_on_OE" />
+          <ScalarProperty Name="Phone_on_OE" ColumnName="Phone_on_OE" />
+          <ScalarProperty Name="PAW_on_OE" ColumnName="PAW_on_OE" />
+          <ScalarProperty Name="Comment_on_OE" ColumnName="Comment_on_OE" />
+          <ScalarProperty Name="HideCustomerAddress" ColumnName="HideCustomerAddress" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="GeneralLocationNotes" ColumnName="GeneralLocationNotes" />
+          <ScalarProperty Name="SaleInvoiceComment" ColumnName="SaleInvoiceComment" />
+          <ScalarProperty Name="BankDetails" ColumnName="BankDetails" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="PropertyTaxes" ColumnName="PropertyTaxes" />
+          <ScalarProperty Name="InsuranceAmount" ColumnName="InsuranceAmount" />
+          <ScalarProperty Name="OtherCharges" ColumnName="OtherCharges" />
+          <ScalarProperty Name="DepositTaken" ColumnName="DepositTaken" />
+          <ScalarProperty Name="LeaseNotes" ColumnName="LeaseNotes" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="LandlordNotes" ColumnName="LandlordNotes" />
+          <ScalarProperty Name="LandlordName" ColumnName="LandlordName" />
+          <ScalarProperty Name="UseLocationEmail" ColumnName="UseLocationEmail" />
+          <ScalarProperty Name="LocationEntityID" ColumnName="LocationEntityID" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+          <ScalarProperty Name="LeaseStartDate" ColumnName="LeaseStartDate" />
+          <ScalarProperty Name="LeaseEndDate" ColumnName="LeaseEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RQRequestTypes">
+      <EntityTypeMapping TypeName="TechBrandsModel.RQRequestType">
+        <MappingFragment StoreEntitySet="RQRequestTypes">
+          <ScalarProperty Name="RequestTypeID" ColumnName="RequestTypeID" />
+          <ScalarProperty Name="RequestTypeDescription" ColumnName="RequestTypeDescription" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RQSalesDetails">
+      <EntityTypeMapping TypeName="TechBrandsModel.RQSalesDetail">
+        <MappingFragment StoreEntitySet="RQSalesDetail">
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="ProductSKU" ColumnName="ProductSKU" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="RQPriority" ColumnName="RQPriority" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

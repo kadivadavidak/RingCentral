@@ -1,0 +1,71 @@
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe.config
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.pdb
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.dll
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.dll
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.dll
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.dll
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.xml
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.xml
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.xml
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.xml
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.csprojResolveAssemblyReference.cache
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.exe
+\\springdog.local\data\redirecteduserdata\dkirschman\my documents\visual studio 2015\Projects\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.pdb
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe.config
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.exe
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.pdb
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.pdb
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Net.Http.Formatting.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.dll
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.xml
+Z:\Documents\GitHub\business-intelligence\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.exe
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.pdb
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe.config
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.pdb
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.dll
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.xml
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.xml
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.xml
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.xml
+D:\Documents\GitHub\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe.config
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.exe
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RingCentralDataIntegration.pdb
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Net.Http.Formatting.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.dll
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\EntityFramework.SqlServer.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\Newtonsoft.Json.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\RestSharp.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\bin\Release\System.Web.Http.WebHost.xml
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.csprojResolveAssemblyReference.cache
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.exe
+\\springdog.local\data\RedirectedUserData\dkirschman\My Documents\RingCentralDataIntegration\RingCentralDataIntegration\obj\Release\RingCentralDataIntegration.pdb

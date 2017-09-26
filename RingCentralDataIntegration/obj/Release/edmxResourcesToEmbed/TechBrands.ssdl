@@ -1,0 +1,3446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TechBrandsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dbo.AddressAbbr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AddressAbbr">
+    <Key>
+      <PropertyRef Name="AddressAbbrID" />
+    </Key>
+    <Property Name="AddressAbbrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FindThis" Type="varchar" MaxLength="25" />
+    <Property Name="ReplaceWith" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="AdjustmentDescriptions">
+    <Key>
+      <PropertyRef Name="AdjustmentDescriptionID" />
+    </Key>
+    <Property Name="AdjustmentDescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdjustmentDescription" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdjustmentTypes">
+    <Key>
+      <PropertyRef Name="AdjustmentTypeID" />
+    </Key>
+    <Property Name="AdjustmentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdjustmentType" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aliases">
+    <Key>
+      <PropertyRef Name="AliasID" />
+    </Key>
+    <Property Name="AliasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Alias" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="AliasTypeID" Type="int" Nullable="false" />
+    <Property Name="AliasDate" Type="date" Nullable="false" />
+    <Property Name="AliasOrder" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AliasTypes">
+    <Key>
+      <PropertyRef Name="AliasTypeID" />
+    </Key>
+    <Property Name="AliasTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AliasType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AliasTypeDesc" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Calendar">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="CalendarTypeID" />
+    </Key>
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="DayName" Type="varchar" MaxLength="10" />
+    <Property Name="WeekDay" Type="int" />
+    <Property Name="Week" Type="int" />
+    <Property Name="WeekStart" Type="date" />
+    <Property Name="WeekFinish" Type="date" />
+    <Property Name="WeekRange" Type="varchar" MaxLength="25" />
+    <Property Name="WeekRangeShort" Type="varchar" MaxLength="13" />
+    <Property Name="MonthWeek" Type="int" />
+    <Property Name="MonthDay" Type="int" />
+    <Property Name="DaysInMonth" Type="int" />
+    <Property Name="DaysLeftInMonth" Type="int" />
+    <Property Name="Month" Type="int" />
+    <Property Name="MonthName" Type="varchar" MaxLength="10" />
+    <Property Name="MonthNameAbbr" Type="varchar" MaxLength="3" />
+    <Property Name="MonthYear" Type="varchar" MaxLength="8" />
+    <Property Name="Quarter" Type="int" />
+    <Property Name="QuarterName" Type="varchar" MaxLength="2" />
+    <Property Name="QuarterWeek" Type="int" />
+    <Property Name="QuarterDay" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="YearDay" Type="int" />
+    <Property Name="WeekRank" Type="int" />
+    <Property Name="MonthRank" Type="int" />
+    <Property Name="QuarterRank" Type="int" />
+    <Property Name="CalendarTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CalendarTypes">
+    <Key>
+      <PropertyRef Name="CalendarTypeID" />
+    </Key>
+    <Property Name="CalendarTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CalendarType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Collections">
+    <Key>
+      <PropertyRef Name="CollectionID" />
+    </Key>
+    <Property Name="CollectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Collection" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerAddress">
+    <Key>
+      <PropertyRef Name="CustomerAddressID" />
+    </Key>
+    <Property Name="CustomerAddressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Zip" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="CustomerContact">
+    <Key>
+      <PropertyRef Name="CustomerContactID" />
+    </Key>
+    <Property Name="CustomerContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="AltName" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerType" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="DoNotContact" Type="bit" />
+    <Property Name="POSIntID" Type="int" />
+    <Property Name="POSGuidID" Type="uniqueidentifier" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerTimeline">
+    <Key>
+      <PropertyRef Name="CustomerTimelineID" />
+    </Key>
+    <Property Name="CustomerTimelineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="CustomerContactID" Type="int" />
+    <Property Name="CustomerAddressID" Type="int" />
+    <Property Name="TimelineDate" Type="date" Nullable="false" />
+    <Property Name="TimelineOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataTypes">
+    <Key>
+      <PropertyRef Name="DataTypeID" />
+    </Key>
+    <Property Name="DataTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'DCCharacteristic' in the table 'TechBrands.dbo.DealerCodeCharacteristics' was excluded.-->
+  <EntityType Name="DealerCodeCharacteristics">
+    <Key>
+      <PropertyRef Name="DCCharacteristicID" />
+    </Key>
+    <Property Name="DCCharacteristicID" Type="int" Nullable="false" />
+    <Property Name="DealerCodeID" Type="int" Nullable="false" />
+    <Property Name="DCCharacteristicTypeID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+  </EntityType>
+  <EntityType Name="DealerCodeCharacteristicTypes">
+    <Key>
+      <PropertyRef Name="DCCharacteristicTypeID" />
+    </Key>
+    <Property Name="DCCharacteristicTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DCCharacteristic" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DealerCodes">
+    <Key>
+      <PropertyRef Name="DealerCodeID" />
+    </Key>
+    <Property Name="DealerCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CloseDate" Type="date" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="AcctStoreID" Type="int" Nullable="false" />
+    <Property Name="DealerCodeTypeID" Type="int" Nullable="false" />
+    <Property Name="AcquisitionOriginID" Type="int" />
+    <Property Name="DealerCodeOrigin" Type="varchar" MaxLength="50" />
+    <Property Name="StoreOriginType" Type="varchar" MaxLength="50" />
+    <Property Name="DealerCodeStatusID" Type="int" Nullable="false" />
+    <Property Name="DealerCodeOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="DealerCodeStatus">
+    <Key>
+      <PropertyRef Name="DealerCodeStatusID" />
+    </Key>
+    <Property Name="DealerCodeStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerCodeStatus" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DealerCodeTypes">
+    <Key>
+      <PropertyRef Name="DealerCodeTypeID" />
+    </Key>
+    <Property Name="DealerCodeTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerCodeType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DealerHierarchies">
+    <Key>
+      <PropertyRef Name="DealerHierarchyID" />
+    </Key>
+    <Property Name="DealerHierarchyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerCodeID" Type="int" Nullable="false" />
+    <Property Name="DealerHierarchyNameID" Type="int" Nullable="false" />
+    <Property Name="DealerHierarchyLevelID" Type="int" Nullable="false" />
+    <Property Name="DealerHierarchyParentNameID" Type="int" />
+    <Property Name="DealerHierarchyDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DealerHierarchyLevels">
+    <Key>
+      <PropertyRef Name="DealerHierarchyLevelID" />
+    </Key>
+    <Property Name="DealerHierarchyLevelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerHierarchyLevelName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DealerHierarchyNames">
+    <Key>
+      <PropertyRef Name="DealerHierarchyNameID" />
+    </Key>
+    <Property Name="DealerHierarchyNameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerHierarchyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DealerHierarchyAbbr" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DefinitionHierarchies">
+    <Key>
+      <PropertyRef Name="DefinitionHierarchyID" />
+    </Key>
+    <Property Name="DefinitionHierarchyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentDefinitionID" Type="int" Nullable="false" />
+    <Property Name="ChildDefinitionID" Type="int" Nullable="false" />
+    <Property Name="CollectionID" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Definitions">
+    <Key>
+      <PropertyRef Name="DefinitionID" />
+    </Key>
+    <Property Name="DefinitionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Definition" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'Adjustment' in the table 'TechBrands.dbo.DivisionAdjustments' was excluded.-->
+  <EntityType Name="DivisionAdjustments">
+    <Key>
+      <PropertyRef Name="DivisionAdjustmentID" />
+    </Key>
+    <Property Name="DivisionAdjustmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="AdjustmentDescriptionID" Type="int" Nullable="false" />
+    <Property Name="AdjustmentTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Divisions">
+    <Key>
+      <PropertyRef Name="DivisionID" />
+    </Key>
+    <Property Name="DivisionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Division" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'Element' in the table 'TechBrands.dbo.Elements' was excluded.-->
+  <EntityType Name="Elements">
+    <Key>
+      <PropertyRef Name="ElementID" />
+    </Key>
+    <Property Name="ElementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElementHash" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeAdjustments">
+    <Key>
+      <PropertyRef Name="EmployeeAdjustmentID" />
+    </Key>
+    <Property Name="EmployeeAdjustmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Adjustment" Type="money" Nullable="false" />
+    <Property Name="AdjustmentTypeID" Type="int" Nullable="false" />
+    <Property Name="AdjustmentDate" Type="date" Nullable="false" />
+    <Property Name="CreatedDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PosID" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="PrimaryStoreID" Type="int" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="EmployeeStatusID" Type="int" Nullable="false" />
+    <Property Name="OriginID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmployeeStatus">
+    <Key>
+      <PropertyRef Name="EmployeeStatusID" />
+    </Key>
+    <Property Name="EmployeeStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeStatus" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeStatusHistories">
+    <Key>
+      <PropertyRef Name="EmployeeStatusHistoryID" />
+    </Key>
+    <Property Name="EmployeeStatusHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="EmployeeStatusID" Type="int" Nullable="false" />
+    <Property Name="StatusOrder" Type="int" Nullable="false" />
+    <Property Name="StatusDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTimeDetails">
+    <Key>
+      <PropertyRef Name="EmployeeTimeDetailID" />
+    </Key>
+    <Property Name="EmployeeTimeDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="ClockIn" Type="datetime" Nullable="false" />
+    <Property Name="ClockOut" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entities">
+    <Key>
+      <PropertyRef Name="EntityID" />
+    </Key>
+    <Property Name="EntityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="CollectionID" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntityImportKey" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntityElements">
+    <Key>
+      <PropertyRef Name="EntityElementID" />
+    </Key>
+    <Property Name="EntityElementID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="DefinitionID" Type="int" Nullable="false" />
+    <Property Name="ElementID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntityHistories">
+    <Key>
+      <PropertyRef Name="EntityHistoryID" />
+    </Key>
+    <Property Name="EntityHistoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="CollectionID" Type="int" Nullable="false" />
+    <Property Name="ElementID" Type="int" />
+    <Property Name="DefinitionID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntityRelationshipHistories">
+    <Key>
+      <PropertyRef Name="EntityRelationshipHistoryID" />
+    </Key>
+    <Property Name="EntityRelationshipHistoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="ChildEntityID" Type="int" Nullable="false" />
+    <Property Name="RelationshipDefinitionID" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntityRelationships">
+    <Key>
+      <PropertyRef Name="EntityRelationshipID" />
+    </Key>
+    <Property Name="EntityRelationshipID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="ChildEntityID" Type="int" Nullable="false" />
+    <Property Name="RelationshipDefinitionID" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GoalDescriptions">
+    <Key>
+      <PropertyRef Name="GoalDescriptionID" />
+    </Key>
+    <Property Name="GoalDescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GoalDescription" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DataTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="Goals">
+    <Key>
+      <PropertyRef Name="GoalID" />
+    </Key>
+    <Property Name="GoalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GoalDescriptionID" Type="int" Nullable="false" />
+    <Property Name="GoalDate" Type="date" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Goal" Type="float" Nullable="false" />
+    <Property Name="GoalWeightID" Type="int" />
+  </EntityType>
+  <EntityType Name="GoalWeights">
+    <Key>
+      <PropertyRef Name="GoalWeightID" />
+    </Key>
+    <Property Name="GoalWeightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GoalWeight" Type="float" Nullable="false" />
+    <Property Name="WeightTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HierarchyLevels">
+    <Key>
+      <PropertyRef Name="HierarchyLevelID" />
+    </Key>
+    <Property Name="HierarchyLevelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HierarchyLevelName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HierarchyNames">
+    <Key>
+      <PropertyRef Name="HierarchyNameID" />
+    </Key>
+    <Property Name="HierarchyNameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HierarchyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreateDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistoryTypes">
+    <Key>
+      <PropertyRef Name="HistoryTypeID" />
+    </Key>
+    <Property Name="HistoryTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HistoryType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Intervals">
+    <Key>
+      <PropertyRef Name="IntervalID" />
+    </Key>
+    <Property Name="IntervalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Interval" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="InventoryID" />
+    </Key>
+    <Property Name="InventoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkuID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="InventoryDate" Type="int" Nullable="false" />
+    <Property Name="VendorID" Type="int" />
+    <Property Name="SerialNumberID" Type="int" />
+    <Property Name="VendorPNID" Type="int" />
+    <Property Name="ManufacturerPNID" Type="int" />
+    <Property Name="BarcodeID" Type="int" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="CostPerUnit" Type="smallmoney" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventoryIdentificationCodes">
+    <Key>
+      <PropertyRef Name="InventoryIdentificationCodeID" />
+    </Key>
+    <Property Name="InventoryIdentificationCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventoryIdentificationCode" Type="varchar" MaxLength="900" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceActivities">
+    <Key>
+      <PropertyRef Name="InvoiceActivityID" />
+    </Key>
+    <Property Name="InvoiceActivityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="ActivityDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceAdjustments">
+    <Key>
+      <PropertyRef Name="InvoiceAdjustmentID" />
+    </Key>
+    <Property Name="InvoiceAdjustmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="AdjustmentDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoices">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="CustomerTimelineID" Type="int" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LineItems">
+    <Key>
+      <PropertyRef Name="LineItemID" />
+    </Key>
+    <Property Name="LineItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceActivityID" Type="int" Nullable="false" />
+    <Property Name="LineItemOrder" Type="int" Nullable="false" />
+    <Property Name="LineReferenceID" Type="int" Nullable="false" />
+    <Property Name="LineItemTypeID" Type="int" Nullable="false" />
+    <Property Name="SkuID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Cost" Type="money" Nullable="false" />
+    <Property Name="Profit" Type="money" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LineItemTypes">
+    <Key>
+      <PropertyRef Name="LineItemTypeID" />
+    </Key>
+    <Property Name="LineItemTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LineItemType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AddressHash" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Zip" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Latitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="Timezone" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MetricDescriptions">
+    <Key>
+      <PropertyRef Name="MetricDescriptionID" />
+    </Key>
+    <Property Name="MetricDescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MetricDescription" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metrics">
+    <Key>
+      <PropertyRef Name="MetricID" />
+    </Key>
+    <Property Name="MetricID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealerCodeID" Type="int" Nullable="false" />
+    <Property Name="MetricDescriptionID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="MetricValue" Type="float" Nullable="false" />
+    <Property Name="IntervalID" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Origins">
+    <Key>
+      <PropertyRef Name="OriginID" />
+    </Key>
+    <Property Name="OriginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Origin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Processes">
+    <Key>
+      <PropertyRef Name="ProcessID" />
+    </Key>
+    <Property Name="ProcessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Process" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RelationshipDefinitions">
+    <Key>
+      <PropertyRef Name="RelationshipDefinitionID" />
+    </Key>
+    <Property Name="RelationshipDefinitionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationshipDefinition" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ParentCollectionID" Type="int" Nullable="false" />
+    <Property Name="ChildCollectionID" Type="int" Nullable="false" />
+    <Property Name="AllowMultipleParents" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Skus">
+    <Key>
+      <PropertyRef Name="SkuID" />
+    </Key>
+    <Property Name="SkuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sku" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ParentProductID" Type="bigint" />
+    <Property Name="ProductDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ProductEnabled" Type="bit" />
+    <Property Name="Manufacturer" Type="varchar" MaxLength="50" />
+    <Property Name="LevelOne" Type="varchar" MaxLength="150" />
+    <Property Name="LevelTwo" Type="varchar" MaxLength="150" />
+    <Property Name="LevelThree" Type="varchar" MaxLength="150" />
+    <Property Name="LevelFour" Type="varchar" MaxLength="150" />
+    <Property Name="LevelFive" Type="varchar" MaxLength="150" />
+    <Property Name="LevelSix" Type="varchar" MaxLength="150" />
+    <Property Name="LevelSeven" Type="varchar" MaxLength="150" />
+    <Property Name="LevelEight" Type="varchar" MaxLength="150" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusProcesses">
+    <Key>
+      <PropertyRef Name="StatusProcessID" />
+    </Key>
+    <Property Name="StatusProcessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcessID" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusStatusTypes">
+    <Key>
+      <PropertyRef Name="StatusStatusTypeID" />
+    </Key>
+    <Property Name="StatusStatusTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusTypeID" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusTypes">
+    <Key>
+      <PropertyRef Name="StatusTypeID" />
+    </Key>
+    <Property Name="StatusTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'Adjustment' in the table 'TechBrands.dbo.StoreAdjustments' was excluded.-->
+  <EntityType Name="StoreAdjustments">
+    <Key>
+      <PropertyRef Name="StoreAdjustmentID" />
+    </Key>
+    <Property Name="StoreAdjustmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="AdjustmentDescriptionID" Type="int" Nullable="false" />
+    <Property Name="AdjustmentTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'StoreCharacteristic' in the table 'TechBrands.dbo.StoreCharacteristics' was excluded.-->
+  <EntityType Name="StoreCharacteristics">
+    <Key>
+      <PropertyRef Name="StoreCharacteristicID" />
+    </Key>
+    <Property Name="StoreCharacteristicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="StoreCharacteristicTypeID" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoreCharacteristicTypes">
+    <Key>
+      <PropertyRef Name="StoreCharacteristicTypeID" />
+    </Key>
+    <Property Name="StoreCharacteristicTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreCharacteristicType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StoreCharacteristicClass" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StoreHierarchies">
+    <Key>
+      <PropertyRef Name="StoreHierarchyID" />
+    </Key>
+    <Property Name="StoreHierarchyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="HierarchyNameID" Type="int" Nullable="false" />
+    <Property Name="HierarchyLevelID" Type="int" Nullable="false" />
+    <Property Name="HierarchyParentNameID" Type="int" />
+    <Property Name="HierarchyDate" Type="date" Nullable="false" />
+    <Property Name="ManagerID" Type="int" />
+  </EntityType>
+  <EntityType Name="StoreHistories">
+    <Key>
+      <PropertyRef Name="StoreHistoryID" />
+    </Key>
+    <Property Name="StoreHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="LocationID" Type="int" />
+    <Property Name="OriginID" Type="int" Nullable="false" />
+    <Property Name="StoreStatusID" Type="int" Nullable="false" />
+    <Property Name="HistoryOrder" Type="int" Nullable="false" />
+    <Property Name="HistoryTypeID" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stores">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreNumber" Type="int" Nullable="false" />
+    <Property Name="LocationID" Type="int" />
+    <Property Name="StoreStatusID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="OriginID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoreStatus">
+    <Key>
+      <PropertyRef Name="StoreStatusID" />
+    </Key>
+    <Property Name="StoreStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StoreStatusType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TrafficDetails">
+    <Key>
+      <PropertyRef Name="TrafficDetailID" />
+    </Key>
+    <Property Name="TrafficDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="TrafficDateTime" Type="datetime" Nullable="false" />
+    <Property Name="TrafficCount" Type="int" Nullable="false" />
+    <Property Name="TrafficType" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vendors">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vendor" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeightTypes">
+    <Key>
+      <PropertyRef Name="WeightTypeID" />
+    </Key>
+    <Property Name="WeightTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WeightType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.CarrierDealerCodes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CarrierDealerCodes">
+    <Key>
+      <PropertyRef Name="DealerCodeID" />
+      <PropertyRef Name="DealerCode" />
+      <PropertyRef Name="AcctStoreID" />
+    </Key>
+    <Property Name="DealerCodeID" Type="int" Nullable="false" />
+    <Property Name="DealerCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="AcctStoreID" Type="int" Nullable="false" />
+    <Property Name="DealerCodeType" Type="varchar" MaxLength="50" />
+    <Property Name="DealerCodeStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.CarrierMetrics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CarrierMetrics">
+    <Key>
+      <PropertyRef Name="MetricID" />
+      <PropertyRef Name="MetricType" />
+      <PropertyRef Name="MetricDescription" />
+      <PropertyRef Name="MetricValue" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="MetricID" Type="bigint" Nullable="false" />
+    <Property Name="MetricType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MetricDescription" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MetricValue" Type="float" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="DealerCode" Type="varchar" MaxLength="50" />
+    <Property Name="DealerCodeID" Type="int" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="CarrierMetricType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.DailyPayByStore' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DailyPayByStore">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="PayGroup" Type="varchar" MaxLength="50" />
+    <Property Name="Pay" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employees1">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="EmployeeName" />
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="PrimaryStoreID" Type="int" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="CommissionGroup" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeeType" Type="varchar" MaxLength="50" />
+    <Property Name="OrganizationRole" Type="varchar" MaxLength="50" />
+    <Property Name="SecurityRole" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="WorkdayID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.EmployeeSalesKPIs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmployeeSalesKPIs">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="EmployeeStatus" />
+      <PropertyRef Name="ActivityDate" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="EmployeeStatus" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ActivityDate" Type="date" Nullable="false" />
+    <Property Name="GrossProfit" Type="money" />
+    <Property Name="Opps" Type="int" />
+    <Property Name="GrossAdds" Type="int" />
+    <Property Name="Upgrades" Type="int" />
+    <Property Name="StrategicProducts" Type="int" />
+    <Property Name="DLife" Type="int" />
+    <Property Name="AdvancedTV" Type="int" />
+    <Property Name="CRU" Type="int" />
+    <Property Name="GoPhone" Type="int" />
+    <Property Name="AccessoryGP" Type="money" />
+    <Property Name="PostPaidGrossAdds" Type="int" />
+    <Property Name="Wired" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.EmployeeSalesKPIs2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmployeeSalesKPIs2">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="InvoiceDate" />
+      <PropertyRef Name="KPI" />
+      <PropertyRef Name="KPIValue" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="date" Nullable="false" />
+    <Property Name="KPI" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="KPIValue" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.GoalsByDay' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GoalsByDay">
+    <Key>
+      <PropertyRef Name="GoalID" />
+      <PropertyRef Name="MonthlyGoal" />
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="GoalID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DailyGoal" Type="float" />
+    <Property Name="MonthlyGoal" Type="float" Nullable="false" />
+    <Property Name="GoalType" Type="varchar" MaxLength="50" />
+    <Property Name="GoalDescription" Type="varchar" MaxLength="40" />
+    <Property Name="GoalWeight" Type="float" />
+    <Property Name="WeightType" Type="varchar" MaxLength="50" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.SalesCouponDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SalesCouponDetail">
+    <Key>
+      <PropertyRef Name="InvoiceReferenceID" />
+      <PropertyRef Name="ActivityDateTime" />
+      <PropertyRef Name="SkuID" />
+      <PropertyRef Name="Profit" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="Revenue" />
+    </Key>
+    <Property Name="InvoiceReferenceID" Type="bigint" Nullable="false" />
+    <Property Name="ActivityDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SkuID" Type="int" Nullable="false" />
+    <Property Name="Profit" Type="money" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Revenue" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.SalesDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SalesDetail">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="InvoiceNumber" />
+      <PropertyRef Name="InvoiceActivityID" />
+      <PropertyRef Name="ActivityDateTime" />
+      <PropertyRef Name="InvoiceDate" />
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="Profit" />
+      <PropertyRef Name="Revenue" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="InvoiceActivityID" Type="int" Nullable="false" />
+    <Property Name="InvoiceReferenceID" Type="bigint" />
+    <Property Name="ActivityDateTime" Type="datetime" Nullable="false" />
+    <Property Name="InvoiceDate" Type="date" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="SkuID" Type="int" />
+    <Property Name="Profit" Type="money" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Revenue" Type="money" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="ReferenceSkuID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.SalesKPIs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SalesKPIs">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="ActivityDate" />
+    </Key>
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="ActivityDate" Type="date" Nullable="false" />
+    <Property Name="GrossProfit" Type="money" />
+    <Property Name="Opps" Type="int" />
+    <Property Name="GrossAdds" Type="int" />
+    <Property Name="Upgrades" Type="int" />
+    <Property Name="StrategicProducts" Type="int" />
+    <Property Name="DLife" Type="int" />
+    <Property Name="AdvancedTV" Type="int" />
+    <Property Name="CRU" Type="int" />
+    <Property Name="GoPhone" Type="int" />
+    <Property Name="AccessoryGP" Type="money" />
+    <Property Name="PostPaidGrossAdds" Type="int" />
+    <Property Name="Wired" Type="int" />
+    <Property Name="Traffic" Type="int" />
+    <Property Name="Wearables" Type="int" />
+    <Property Name="UverseUnits" Type="int" />
+    <Property Name="TotalPhones" Type="int" />
+    <Property Name="TabletUnits" Type="int" />
+    <Property Name="TabletData" Type="int" />
+    <Property Name="Smartphones" Type="int" />
+    <Property Name="FeatUnits" Type="int" />
+    <Property Name="RevenueNoCoupons" Type="money" />
+    <Property Name="NonContract" Type="int" />
+    <Property Name="Next" Type="int" />
+    <Property Name="LG G5" Type="int" />
+    <Property Name="iOS" Type="int" />
+    <Property Name="IntegratedProducts" Type="int" />
+    <Property Name="HYLA" Type="int" />
+    <Property Name="GadgetGuardGP" Type="money" />
+    <Property Name="FeatureGP" Type="money" />
+    <Property Name="DirecTVUnits" Type="int" />
+    <Property Name="BYOD" Type="int" />
+    <Property Name="AndroidUnits" Type="int" />
+    <Property Name="AllCoupons" Type="money" />
+    <Property Name="AccessoryUnits" Type="int" />
+    <Property Name="AccEligOpps" Type="int" />
+    <Property Name="AccessoryCoupons" Type="money" />
+    <Property Name="RawGrossProfit" Type="money" />
+    <Property Name="NoniOSSmartPhones" Type="int" />
+    <Property Name="HSI" Type="int" />
+    <Property Name="MobileInsurance" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.SisenseInvoiceFlags' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SisenseInvoiceFlags">
+    <Key>
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="InvoiceNumber" />
+    </Key>
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="SMServiceFlag" Type="int" />
+    <Property Name="smMobilityiPadFlag" Type="int" />
+    <Property Name="smMobilityiPhoneFlag" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.Skus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Skus1">
+    <Key>
+      <PropertyRef Name="SkuID" />
+      <PropertyRef Name="Sku" />
+      <PropertyRef Name="DivisionID" />
+    </Key>
+    <Property Name="SkuID" Type="int" Nullable="false" />
+    <Property Name="Sku" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ParentProductID" Type="bigint" />
+    <Property Name="ProductDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ProductEnabled" Type="bit" />
+    <Property Name="Manufacturer" Type="varchar" MaxLength="50" />
+    <Property Name="LevelOne" Type="varchar" MaxLength="150" />
+    <Property Name="LevelTwo" Type="varchar" MaxLength="150" />
+    <Property Name="LevelThree" Type="varchar" MaxLength="150" />
+    <Property Name="LevelFour" Type="varchar" MaxLength="150" />
+    <Property Name="LevelFive" Type="varchar" MaxLength="150" />
+    <Property Name="LevelSix" Type="varchar" MaxLength="150" />
+    <Property Name="LevelSeven" Type="varchar" MaxLength="150" />
+    <Property Name="LevelEight" Type="varchar" MaxLength="150" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.Stores' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Stores1">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="DivisionID" />
+      <PropertyRef Name="StoreNumber" />
+    </Key>
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+    <Property Name="Store" Type="varchar" MaxLength="157" />
+    <Property Name="StoreNumber" Type="int" Nullable="false" />
+    <Property Name="StoreName" Type="varchar" MaxLength="150" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="10" />
+    <Property Name="Zip" Type="char" MaxLength="10" />
+    <Property Name="Timezone" Type="varchar" MaxLength="100" />
+    <Property Name="Latitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="Backdoor" Type="varchar" MaxLength="50" />
+    <Property Name="Billpay" Type="varchar" MaxLength="50" />
+    <Property Name="ClosedDate" Type="date" />
+    <Property Name="DigitalLife" Type="bit" />
+    <Property Name="StoreType" Type="varchar" MaxLength="50" />
+    <Property Name="OpenDate" Type="date" />
+    <Property Name="OpenSunday" Type="bit" />
+    <Property Name="Tier" Type="varchar" MaxLength="50" />
+    <Property Name="Uverse" Type="bit" />
+    <Property Name="Wired" Type="bit" />
+    <Property Name="District" Type="varchar" MaxLength="50" />
+    <Property Name="Region" Type="varchar" MaxLength="50" />
+    <Property Name="Market" Type="varchar" MaxLength="50" />
+    <Property Name="Origin" Type="varchar" MaxLength="50" />
+    <Property Name="StoreStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.dw.StoreSalesKPIs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="StoreSalesKPIs">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="InvoiceDate" />
+      <PropertyRef Name="KPI" />
+      <PropertyRef Name="KPIValue" />
+    </Key>
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="date" Nullable="false" />
+    <Property Name="KPI" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="KPIValue" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Traffic">
+    <Key>
+      <PropertyRef Name="TrafficID" />
+    </Key>
+    <Property Name="TrafficID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="TrafficDate" Type="date" Nullable="false" />
+    <Property Name="TrafficCount" Type="int" Nullable="false" />
+    <Property Name="TrafficType" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountLevels">
+    <Key>
+      <PropertyRef Name="AccountLevelID" />
+    </Key>
+    <Property Name="AccountLevelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountLevel" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CostCenters">
+    <Key>
+      <PropertyRef Name="CostCenterID" />
+    </Key>
+    <Property Name="CostCenterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="HierarchyNameID" Type="int" />
+    <Property Name="HierarchyLevelID" Type="int" />
+    <Property Name="CostCenter" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="AccountLevelID" Type="int" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FTE">
+    <Key>
+      <PropertyRef Name="FTEID" />
+    </Key>
+    <Property Name="FTEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="NumberFTE" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GLAccountDetails">
+    <Key>
+      <PropertyRef Name="GLAccountDetailID" />
+    </Key>
+    <Property Name="GLAccountDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CostCenterID" Type="int" />
+    <Property Name="GLAccountTypeID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="TBAccountID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GLAccountTypes">
+    <Key>
+      <PropertyRef Name="GLAccountTypeID" />
+    </Key>
+    <Property Name="GLAccountTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GLAccountType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBAccounts">
+    <Key>
+      <PropertyRef Name="TBAccountID" />
+    </Key>
+    <Property Name="TBAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TBAccount" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="DivisionID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'sql_variant' is currently not supported for the target Entity Framework version; the column 'EmployeeCharacteristic' in the table 'TechBrands.hr.EmployeeCharacteristics' was excluded.-->
+  <EntityType Name="EmployeeCharacteristics">
+    <Key>
+      <PropertyRef Name="EmployeeCharacteristicsID" />
+    </Key>
+    <Property Name="EmployeeCharacteristicsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="EmployeeCharacteristicTypeID" Type="int" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmployeeCharacteristicTypes">
+    <Key>
+      <PropertyRef Name="EmployeeCharacteristicTypeID" />
+    </Key>
+    <Property Name="EmployeeCharacteristicTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeCharacteristicType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeCharacteristicClass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TechBrands.staging.RingCentral_CallLegs' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RingCentral_CallLegs">
+          <Property Name="CallLogId" Type="varchar" MaxLength="255" />
+          <Property Name="LegId" Type="varchar" MaxLength="255" />
+          <Property Name="StartTime" Type="varchar" MaxLength="255" />
+          <Property Name="Duration" Type="varchar" MaxLength="255" />
+          <Property Name="Type" Type="varchar" MaxLength="255" />
+          <Property Name="Direction" Type="varchar" MaxLength="255" />
+          <Property Name="Action" Type="varchar" MaxLength="255" />
+          <Property Name="Result" Type="varchar" MaxLength="255" />
+          <Property Name="Transport" Type="varchar" MaxLength="255" />
+          <Property Name="LegType" Type="varchar" MaxLength="255" />
+          <Property Name="DateAccessed" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.staging.RQCardTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RQCardTypes">
+    <Key>
+      <PropertyRef Name="AccessedDate" />
+    </Key>
+    <Property Name="CardTypeID" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="255" />
+    <Property Name="Mnemonic" Type="varchar" MaxLength="255" />
+    <Property Name="AccountNumberLength" Type="int" />
+    <Property Name="CvvLength" Type="int" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.staging.RQEntryTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RQEntryTypes">
+    <Key>
+      <PropertyRef Name="AccessedDate" />
+    </Key>
+    <Property Name="EntryTypeID" Type="int" />
+    <Property Name="EntryTypeDescription" Type="varchar" MaxLength="255" />
+    <Property Name="Message" Type="varchar" MaxLength="255" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.staging.RQLocations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RQLocations">
+    <Key>
+      <PropertyRef Name="AccessedDate" />
+    </Key>
+    <Property Name="StoreID" Type="varchar" MaxLength="255" />
+    <Property Name="StoreName" Type="varchar" MaxLength="255" />
+    <Property Name="Disabled" Type="varchar" MaxLength="255" />
+    <Property Name="Abbreviation" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerEmployeeID" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerCommissionable" Type="varchar" MaxLength="255" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="255" />
+    <Property Name="StateProv" Type="varchar" MaxLength="255" />
+    <Property Name="ZipPostal" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+    <Property Name="FaxNumber" Type="varchar" MaxLength="255" />
+    <Property Name="DistrictName" Type="varchar" MaxLength="255" />
+    <Property Name="RegionName" Type="varchar" MaxLength="255" />
+    <Property Name="ChannelName" Type="varchar" MaxLength="255" />
+    <Property Name="StoreType" Type="varchar" MaxLength="255" />
+    <Property Name="GLCode" Type="varchar" MaxLength="255" />
+    <Property Name="SquareFootage" Type="varchar" MaxLength="255" />
+    <Property Name="LocationCode" Type="varchar" MaxLength="255" />
+    <Property Name="Latitude" Type="varchar" MaxLength="255" />
+    <Property Name="Longitude" Type="varchar" MaxLength="255" />
+    <Property Name="AddressVerified" Type="varchar" MaxLength="255" />
+    <Property Name="TimeZone" Type="varchar" MaxLength="255" />
+    <Property Name="AdjustDST" Type="varchar" MaxLength="255" />
+    <Property Name="CashPolicy" Type="varchar" MaxLength="255" />
+    <Property Name="MaxCashDrawer" Type="varchar" MaxLength="255" />
+    <Property Name="Serial_on_OE" Type="varchar" MaxLength="255" />
+    <Property Name="Phone_on_OE" Type="varchar" MaxLength="255" />
+    <Property Name="PAW_on_OE" Type="varchar" MaxLength="255" />
+    <Property Name="Comment_on_OE" Type="varchar" MaxLength="255" />
+    <Property Name="HideCustomerAddress" Type="varchar" MaxLength="255" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="255" />
+    <Property Name="GeneralLocationNotes" Type="varchar" MaxLength="255" />
+    <Property Name="SaleInvoiceComment" Type="varchar" MaxLength="1000" />
+    <Property Name="BankDetails" Type="varchar" MaxLength="255" />
+    <Property Name="Taxes" Type="varchar" MaxLength="255" />
+    <Property Name="Rent" Type="varchar" MaxLength="255" />
+    <Property Name="PropertyTaxes" Type="varchar" MaxLength="255" />
+    <Property Name="InsuranceAmount" Type="varchar" MaxLength="255" />
+    <Property Name="OtherCharges" Type="varchar" MaxLength="255" />
+    <Property Name="DepositTaken" Type="varchar" MaxLength="255" />
+    <Property Name="LeaseNotes" Type="varchar" MaxLength="255" />
+    <Property Name="InsuranceCompany" Type="varchar" MaxLength="255" />
+    <Property Name="LandlordNotes" Type="varchar" MaxLength="255" />
+    <Property Name="LandlordName" Type="varchar" MaxLength="255" />
+    <Property Name="UseLocationEmail" Type="varchar" MaxLength="255" />
+    <Property Name="LocationEntityID" Type="varchar" MaxLength="255" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="DivisionID" Type="int" />
+    <Property Name="LeaseStartDate" Type="date" />
+    <Property Name="LeaseEndDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.staging.RQRequestTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RQRequestTypes">
+    <Key>
+      <PropertyRef Name="AccessedDate" />
+    </Key>
+    <Property Name="RequestTypeID" Type="int" />
+    <Property Name="RequestTypeDescription" Type="varchar" MaxLength="255" />
+    <Property Name="Message" Type="varchar" MaxLength="255" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TechBrands.staging.RQSalesDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RQSalesDetail">
+    <Key>
+      <PropertyRef Name="StoreID" />
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="InvoiceNumber" />
+      <PropertyRef Name="ProductSKU" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="EmployeeName" />
+    </Key>
+    <Property Name="ChannelName" Type="nvarchar(max)" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="StoreName" Type="nvarchar(max)" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="101" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="LineID" Type="bigint" />
+    <Property Name="ProductSKU" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Cost" Type="money" />
+    <Property Name="RQPriority" Type="int" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="51" Nullable="false" />
+    <Property Name="DivisionID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Alias_AliasType">
+    <End Role="AliasTypes" Type="Self.AliasTypes" Multiplicity="1" />
+    <End Role="Aliases" Type="Self.Aliases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AliasTypes">
+        <PropertyRef Name="AliasTypeID" />
+      </Principal>
+      <Dependent Role="Aliases">
+        <PropertyRef Name="AliasTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alias_Store1">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="Aliases" Type="Self.Aliases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Aliases">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Calendar_CalendarTypes">
+    <End Role="CalendarTypes" Type="Self.CalendarTypes" Multiplicity="1" />
+    <End Role="Calendar" Type="Self.Calendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CalendarTypes">
+        <PropertyRef Name="CalendarTypeID" />
+      </Principal>
+      <Dependent Role="Calendar">
+        <PropertyRef Name="CalendarTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostCenters_AccountLevel">
+    <End Role="AccountLevels" Type="Self.AccountLevels" Multiplicity="0..1" />
+    <End Role="CostCenters" Type="Self.CostCenters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountLevels">
+        <PropertyRef Name="AccountLevelID" />
+      </Principal>
+      <Dependent Role="CostCenters">
+        <PropertyRef Name="AccountLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostCenters_Divisions">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="CostCenters" Type="Self.CostCenters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="CostCenters">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostCenters_HierarchyLevels">
+    <End Role="HierarchyLevels" Type="Self.HierarchyLevels" Multiplicity="0..1" />
+    <End Role="CostCenters" Type="Self.CostCenters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HierarchyLevels">
+        <PropertyRef Name="HierarchyLevelID" />
+      </Principal>
+      <Dependent Role="CostCenters">
+        <PropertyRef Name="HierarchyLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostCenters_HierarchyNames">
+    <End Role="HierarchyNames" Type="Self.HierarchyNames" Multiplicity="0..1" />
+    <End Role="CostCenters" Type="Self.CostCenters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HierarchyNames">
+        <PropertyRef Name="HierarchyNameID" />
+      </Principal>
+      <Dependent Role="CostCenters">
+        <PropertyRef Name="HierarchyNameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_Divisions">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerTimeline_CustomerAddress">
+    <End Role="CustomerAddress" Type="Self.CustomerAddress" Multiplicity="0..1" />
+    <End Role="CustomerTimeline" Type="Self.CustomerTimeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerAddress">
+        <PropertyRef Name="CustomerAddressID" />
+      </Principal>
+      <Dependent Role="CustomerTimeline">
+        <PropertyRef Name="CustomerAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerTimeline_CustomerContact">
+    <End Role="CustomerContact" Type="Self.CustomerContact" Multiplicity="0..1" />
+    <End Role="CustomerTimeline" Type="Self.CustomerTimeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerContact">
+        <PropertyRef Name="CustomerContactID" />
+      </Principal>
+      <Dependent Role="CustomerTimeline">
+        <PropertyRef Name="CustomerContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerTimeline_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="CustomerTimeline" Type="Self.CustomerTimeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CustomerTimeline">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodeCharacteristics_DealerCodeCharacteristicType">
+    <End Role="DealerCodeCharacteristicTypes" Type="Self.DealerCodeCharacteristicTypes" Multiplicity="1" />
+    <End Role="DealerCodeCharacteristics" Type="Self.DealerCodeCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodeCharacteristicTypes">
+        <PropertyRef Name="DCCharacteristicTypeID" />
+      </Principal>
+      <Dependent Role="DealerCodeCharacteristics">
+        <PropertyRef Name="DCCharacteristicTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodeCharacteristics_DealerCodes">
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="1" />
+    <End Role="DealerCodeCharacteristics" Type="Self.DealerCodeCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodes">
+        <PropertyRef Name="DealerCodeID" />
+      </Principal>
+      <Dependent Role="DealerCodeCharacteristics">
+        <PropertyRef Name="DealerCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodes_DealerCodeStatus">
+    <End Role="DealerCodeStatus" Type="Self.DealerCodeStatus" Multiplicity="1" />
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodeStatus">
+        <PropertyRef Name="DealerCodeStatusID" />
+      </Principal>
+      <Dependent Role="DealerCodes">
+        <PropertyRef Name="DealerCodeStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodes_DealerCodeType">
+    <End Role="DealerCodeTypes" Type="Self.DealerCodeTypes" Multiplicity="1" />
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodeTypes">
+        <PropertyRef Name="DealerCodeTypeID" />
+      </Principal>
+      <Dependent Role="DealerCodes">
+        <PropertyRef Name="DealerCodeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodes_Origin">
+    <End Role="Origins" Type="Self.Origins" Multiplicity="0..1" />
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Origins">
+        <PropertyRef Name="OriginID" />
+      </Principal>
+      <Dependent Role="DealerCodes">
+        <PropertyRef Name="AcquisitionOriginID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerCodes_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="DealerCodes">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerHierarchy_DealerCodes">
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="1" />
+    <End Role="DealerHierarchies" Type="Self.DealerHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodes">
+        <PropertyRef Name="DealerCodeID" />
+      </Principal>
+      <Dependent Role="DealerHierarchies">
+        <PropertyRef Name="DealerCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerHierarchy_DealerHierarchyLevel">
+    <End Role="DealerHierarchyLevels" Type="Self.DealerHierarchyLevels" Multiplicity="1" />
+    <End Role="DealerHierarchies" Type="Self.DealerHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerHierarchyLevels">
+        <PropertyRef Name="DealerHierarchyLevelID" />
+      </Principal>
+      <Dependent Role="DealerHierarchies">
+        <PropertyRef Name="DealerHierarchyLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerHierarchy_DealerHierarchyName">
+    <End Role="DealerHierarchyNames" Type="Self.DealerHierarchyNames" Multiplicity="1" />
+    <End Role="DealerHierarchies" Type="Self.DealerHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerHierarchyNames">
+        <PropertyRef Name="DealerHierarchyNameID" />
+      </Principal>
+      <Dependent Role="DealerHierarchies">
+        <PropertyRef Name="DealerHierarchyNameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DefinitionRelationships_Collections">
+    <End Role="Collections" Type="Self.Collections" Multiplicity="1" />
+    <End Role="DefinitionHierarchies" Type="Self.DefinitionHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collections">
+        <PropertyRef Name="CollectionID" />
+      </Principal>
+      <Dependent Role="DefinitionHierarchies">
+        <PropertyRef Name="CollectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DefinitionRelationships_Definitions">
+    <End Role="Definitions" Type="Self.Definitions" Multiplicity="1" />
+    <End Role="DefinitionHierarchies" Type="Self.DefinitionHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Definitions">
+        <PropertyRef Name="DefinitionID" />
+      </Principal>
+      <Dependent Role="DefinitionHierarchies">
+        <PropertyRef Name="ParentDefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DefinitionRelationships_Definitions1">
+    <End Role="Definitions" Type="Self.Definitions" Multiplicity="1" />
+    <End Role="DefinitionHierarchies" Type="Self.DefinitionHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Definitions">
+        <PropertyRef Name="DefinitionID" />
+      </Principal>
+      <Dependent Role="DefinitionHierarchies">
+        <PropertyRef Name="ChildDefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DivisionAdjustments_AdjustmentDescriptions">
+    <End Role="AdjustmentDescriptions" Type="Self.AdjustmentDescriptions" Multiplicity="1" />
+    <End Role="DivisionAdjustments" Type="Self.DivisionAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdjustmentDescriptions">
+        <PropertyRef Name="AdjustmentDescriptionID" />
+      </Principal>
+      <Dependent Role="DivisionAdjustments">
+        <PropertyRef Name="AdjustmentDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DivisionAdjustments_AdjustmentTypes">
+    <End Role="AdjustmentTypes" Type="Self.AdjustmentTypes" Multiplicity="1" />
+    <End Role="DivisionAdjustments" Type="Self.DivisionAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdjustmentTypes">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Principal>
+      <Dependent Role="DivisionAdjustments">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Division">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeStatus">
+    <End Role="EmployeeStatus" Type="Self.EmployeeStatus" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeStatus">
+        <PropertyRef Name="EmployeeStatusID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="EmployeeStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Origin">
+    <End Role="Origins" Type="Self.Origins" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Origins">
+        <PropertyRef Name="OriginID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="OriginID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="PrimaryStoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAdjustment_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="EmployeeAdjustments" Type="Self.EmployeeAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAdjustments">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAdjustment_EmployeeAdjustmentType">
+    <End Role="AdjustmentTypes" Type="Self.AdjustmentTypes" Multiplicity="1" />
+    <End Role="EmployeeAdjustments" Type="Self.EmployeeAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdjustmentTypes">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Principal>
+      <Dependent Role="EmployeeAdjustments">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAdjustment_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="EmployeeAdjustments" Type="Self.EmployeeAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="EmployeeAdjustments">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeCharacteristics_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="EmployeeCharacteristics" Type="Self.EmployeeCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeCharacteristics">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeCharacteristics_EmployeeCharacteristicType">
+    <End Role="EmployeeCharacteristicTypes" Type="Self.EmployeeCharacteristicTypes" Multiplicity="1" />
+    <End Role="EmployeeCharacteristics" Type="Self.EmployeeCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeCharacteristicTypes">
+        <PropertyRef Name="EmployeeCharacteristicTypeID" />
+      </Principal>
+      <Dependent Role="EmployeeCharacteristics">
+        <PropertyRef Name="EmployeeCharacteristicTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeStatusHistory_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="EmployeeStatusHistories" Type="Self.EmployeeStatusHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeStatusHistories">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeStatusHistory_EmployeeStatus">
+    <End Role="EmployeeStatus" Type="Self.EmployeeStatus" Multiplicity="1" />
+    <End Role="EmployeeStatusHistories" Type="Self.EmployeeStatusHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeStatus">
+        <PropertyRef Name="EmployeeStatusID" />
+      </Principal>
+      <Dependent Role="EmployeeStatusHistories">
+        <PropertyRef Name="EmployeeStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeTimeDetails_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="EmployeeTimeDetails" Type="Self.EmployeeTimeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeTimeDetails">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeTimeDetails_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="EmployeeTimeDetails" Type="Self.EmployeeTimeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="EmployeeTimeDetails">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Entities_Collections">
+    <End Role="Collections" Type="Self.Collections" Multiplicity="1" />
+    <End Role="Entities" Type="Self.Entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collections">
+        <PropertyRef Name="CollectionID" />
+      </Principal>
+      <Dependent Role="Entities">
+        <PropertyRef Name="CollectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Entities_Divisions">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="Entities" Type="Self.Entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="Entities">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Entities_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Entities" Type="Self.Entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="Entities">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityHistories_Collections">
+    <End Role="Collections" Type="Self.Collections" Multiplicity="1" />
+    <End Role="EntityHistories" Type="Self.EntityHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collections">
+        <PropertyRef Name="CollectionID" />
+      </Principal>
+      <Dependent Role="EntityHistories">
+        <PropertyRef Name="CollectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityHistories_Definitions">
+    <End Role="Definitions" Type="Self.Definitions" Multiplicity="0..1" />
+    <End Role="EntityHistories" Type="Self.EntityHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Definitions">
+        <PropertyRef Name="DefinitionID" />
+      </Principal>
+      <Dependent Role="EntityHistories">
+        <PropertyRef Name="DefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityHistories_Values">
+    <End Role="Elements" Type="Self.Elements" Multiplicity="0..1" />
+    <End Role="EntityHistories" Type="Self.EntityHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elements">
+        <PropertyRef Name="ElementID" />
+      </Principal>
+      <Dependent Role="EntityHistories">
+        <PropertyRef Name="ElementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationshipHistories_Entities">
+    <End Role="Entities" Type="Self.Entities" Multiplicity="1" />
+    <End Role="EntityRelationshipHistories" Type="Self.EntityRelationshipHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="EntityRelationshipHistories">
+        <PropertyRef Name="ParentEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationshipHistories_Entities1">
+    <End Role="Entities" Type="Self.Entities" Multiplicity="1" />
+    <End Role="EntityRelationshipHistories" Type="Self.EntityRelationshipHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="EntityRelationshipHistories">
+        <PropertyRef Name="ChildEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationshipHistories_RelationshipDefinitions">
+    <End Role="RelationshipDefinitions" Type="Self.RelationshipDefinitions" Multiplicity="1" />
+    <End Role="EntityRelationshipHistories" Type="Self.EntityRelationshipHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RelationshipDefinitions">
+        <PropertyRef Name="RelationshipDefinitionID" />
+      </Principal>
+      <Dependent Role="EntityRelationshipHistories">
+        <PropertyRef Name="RelationshipDefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationships_Entities">
+    <End Role="Entities" Type="Self.Entities" Multiplicity="1" />
+    <End Role="EntityRelationships" Type="Self.EntityRelationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="EntityRelationships">
+        <PropertyRef Name="ParentEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationships_Entities1">
+    <End Role="Entities" Type="Self.Entities" Multiplicity="1" />
+    <End Role="EntityRelationships" Type="Self.EntityRelationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="EntityRelationships">
+        <PropertyRef Name="ChildEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityRelationships_RelationshipDefinitions">
+    <End Role="RelationshipDefinitions" Type="Self.RelationshipDefinitions" Multiplicity="1" />
+    <End Role="EntityRelationships" Type="Self.EntityRelationships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RelationshipDefinitions">
+        <PropertyRef Name="RelationshipDefinitionID" />
+      </Principal>
+      <Dependent Role="EntityRelationships">
+        <PropertyRef Name="RelationshipDefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityValues_Definitions">
+    <End Role="Definitions" Type="Self.Definitions" Multiplicity="1" />
+    <End Role="EntityElements" Type="Self.EntityElements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Definitions">
+        <PropertyRef Name="DefinitionID" />
+      </Principal>
+      <Dependent Role="EntityElements">
+        <PropertyRef Name="DefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityValues_Entities">
+    <End Role="Entities" Type="Self.Entities" Multiplicity="1" />
+    <End Role="EntityElements" Type="Self.EntityElements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="EntityElements">
+        <PropertyRef Name="EntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntityValues_Values">
+    <End Role="Elements" Type="Self.Elements" Multiplicity="1" />
+    <End Role="EntityElements" Type="Self.EntityElements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elements">
+        <PropertyRef Name="ElementID" />
+      </Principal>
+      <Dependent Role="EntityElements">
+        <PropertyRef Name="ElementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FTE_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="FTE" Type="Self.FTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="FTE">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLAccountDetail_CostCenters">
+    <End Role="CostCenters" Type="Self.CostCenters" Multiplicity="0..1" />
+    <End Role="GLAccountDetails" Type="Self.GLAccountDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostCenters">
+        <PropertyRef Name="CostCenterID" />
+      </Principal>
+      <Dependent Role="GLAccountDetails">
+        <PropertyRef Name="CostCenterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLAccountDetail_GLAccountType">
+    <End Role="GLAccountTypes" Type="Self.GLAccountTypes" Multiplicity="1" />
+    <End Role="GLAccountDetails" Type="Self.GLAccountDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GLAccountTypes">
+        <PropertyRef Name="GLAccountTypeID" />
+      </Principal>
+      <Dependent Role="GLAccountDetails">
+        <PropertyRef Name="GLAccountTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLAccountDetail_TBAccounts">
+    <End Role="TBAccounts" Type="Self.TBAccounts" Multiplicity="1" />
+    <End Role="GLAccountDetails" Type="Self.GLAccountDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBAccounts">
+        <PropertyRef Name="TBAccountID" />
+      </Principal>
+      <Dependent Role="GLAccountDetails">
+        <PropertyRef Name="TBAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoalDescriptions_DataTypes">
+    <End Role="DataTypes" Type="Self.DataTypes" Multiplicity="0..1" />
+    <End Role="GoalDescriptions" Type="Self.GoalDescriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataTypes">
+        <PropertyRef Name="DataTypeID" />
+      </Principal>
+      <Dependent Role="GoalDescriptions">
+        <PropertyRef Name="DataTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Goals_GoalDescription">
+    <End Role="GoalDescriptions" Type="Self.GoalDescriptions" Multiplicity="1" />
+    <End Role="Goals" Type="Self.Goals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GoalDescriptions">
+        <PropertyRef Name="GoalDescriptionID" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="GoalDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Goals_GoalWeight">
+    <End Role="GoalWeights" Type="Self.GoalWeights" Multiplicity="0..1" />
+    <End Role="Goals" Type="Self.Goals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GoalWeights">
+        <PropertyRef Name="GoalWeightID" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="GoalWeightID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Goals_Store1">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="Goals" Type="Self.Goals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoalWeight_WeightType">
+    <End Role="WeightTypes" Type="Self.WeightTypes" Multiplicity="1" />
+    <End Role="GoalWeights" Type="Self.GoalWeights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeightTypes">
+        <PropertyRef Name="WeightTypeID" />
+      </Principal>
+      <Dependent Role="GoalWeights">
+        <PropertyRef Name="WeightTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_InventoryIdentificationCodes">
+    <End Role="InventoryIdentificationCodes" Type="Self.InventoryIdentificationCodes" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryIdentificationCodes">
+        <PropertyRef Name="InventoryIdentificationCodeID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="SerialNumberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_InventoryIdentificationCodes1">
+    <End Role="InventoryIdentificationCodes" Type="Self.InventoryIdentificationCodes" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryIdentificationCodes">
+        <PropertyRef Name="InventoryIdentificationCodeID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="VendorPNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_InventoryIdentificationCodes2">
+    <End Role="InventoryIdentificationCodes" Type="Self.InventoryIdentificationCodes" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryIdentificationCodes">
+        <PropertyRef Name="InventoryIdentificationCodeID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="ManufacturerPNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_InventoryIdentificationCodes3">
+    <End Role="InventoryIdentificationCodes" Type="Self.InventoryIdentificationCodes" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryIdentificationCodes">
+        <PropertyRef Name="InventoryIdentificationCodeID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="BarcodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Skus">
+    <End Role="Skus" Type="Self.Skus" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skus">
+        <PropertyRef Name="SkuID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="SkuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Vendors">
+    <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendors">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceActivity_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="InvoiceActivities" Type="Self.InvoiceActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="InvoiceActivities">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceActivity_Invoice">
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="1" />
+    <End Role="InvoiceActivities" Type="Self.InvoiceActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceActivities">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceActivity_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="InvoiceActivities" Type="Self.InvoiceActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="InvoiceActivities">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceAdjustments_Employee_EmployeeID">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InvoiceAdjustments" Type="Self.InvoiceAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="InvoiceAdjustments">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceAdjustments_Invoice_InvoiceID">
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InvoiceAdjustments" Type="Self.InvoiceAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceAdjustments">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoices_CustomerTimeline">
+    <End Role="CustomerTimeline" Type="Self.CustomerTimeline" Multiplicity="0..1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerTimeline">
+        <PropertyRef Name="CustomerTimelineID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="CustomerTimelineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineItem_InvoiceActivity">
+    <End Role="InvoiceActivities" Type="Self.InvoiceActivities" Multiplicity="1" />
+    <End Role="LineItems" Type="Self.LineItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceActivities">
+        <PropertyRef Name="InvoiceActivityID" />
+      </Principal>
+      <Dependent Role="LineItems">
+        <PropertyRef Name="InvoiceActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineItems_LineItemTypes">
+    <End Role="LineItemTypes" Type="Self.LineItemTypes" Multiplicity="1" />
+    <End Role="LineItems" Type="Self.LineItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LineItemTypes">
+        <PropertyRef Name="LineItemTypeID" />
+      </Principal>
+      <Dependent Role="LineItems">
+        <PropertyRef Name="LineItemTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineItems_Skus">
+    <End Role="Skus" Type="Self.Skus" Multiplicity="1" />
+    <End Role="LineItems" Type="Self.LineItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skus">
+        <PropertyRef Name="SkuID" />
+      </Principal>
+      <Dependent Role="LineItems">
+        <PropertyRef Name="SkuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MetricDescriptions_DataTypes">
+    <End Role="DataTypes" Type="Self.DataTypes" Multiplicity="1" />
+    <End Role="MetricDescriptions" Type="Self.MetricDescriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataTypes">
+        <PropertyRef Name="DataTypeID" />
+      </Principal>
+      <Dependent Role="MetricDescriptions">
+        <PropertyRef Name="DataTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metrics_DealerCodes">
+    <End Role="DealerCodes" Type="Self.DealerCodes" Multiplicity="1" />
+    <End Role="Metrics" Type="Self.Metrics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealerCodes">
+        <PropertyRef Name="DealerCodeID" />
+      </Principal>
+      <Dependent Role="Metrics">
+        <PropertyRef Name="DealerCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metrics_Intervals">
+    <End Role="Intervals" Type="Self.Intervals" Multiplicity="1" />
+    <End Role="Metrics" Type="Self.Metrics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Intervals">
+        <PropertyRef Name="IntervalID" />
+      </Principal>
+      <Dependent Role="Metrics">
+        <PropertyRef Name="IntervalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Metrics_MetricDesc">
+    <End Role="MetricDescriptions" Type="Self.MetricDescriptions" Multiplicity="1" />
+    <End Role="Metrics" Type="Self.Metrics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MetricDescriptions">
+        <PropertyRef Name="MetricDescriptionID" />
+      </Principal>
+      <Dependent Role="Metrics">
+        <PropertyRef Name="MetricDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelationshipDefinitions_Collections">
+    <End Role="Collections" Type="Self.Collections" Multiplicity="1" />
+    <End Role="RelationshipDefinitions" Type="Self.RelationshipDefinitions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collections">
+        <PropertyRef Name="CollectionID" />
+      </Principal>
+      <Dependent Role="RelationshipDefinitions">
+        <PropertyRef Name="ParentCollectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelationshipDefinitions_Collections1">
+    <End Role="Collections" Type="Self.Collections" Multiplicity="1" />
+    <End Role="RelationshipDefinitions" Type="Self.RelationshipDefinitions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collections">
+        <PropertyRef Name="CollectionID" />
+      </Principal>
+      <Dependent Role="RelationshipDefinitions">
+        <PropertyRef Name="ChildCollectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skus_Division">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="Skus" Type="Self.Skus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="Skus">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatusProcesses_Processes">
+    <End Role="Processes" Type="Self.Processes" Multiplicity="1" />
+    <End Role="StatusProcesses" Type="Self.StatusProcesses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Processes">
+        <PropertyRef Name="ProcessID" />
+      </Principal>
+      <Dependent Role="StatusProcesses">
+        <PropertyRef Name="ProcessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatusProcesses_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="StatusProcesses" Type="Self.StatusProcesses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="StatusProcesses">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatusStatusTypes_StatusTypes">
+    <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+    <End Role="StatusStatusTypes" Type="Self.StatusStatusTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTypes">
+        <PropertyRef Name="StatusTypeID" />
+      </Principal>
+      <Dependent Role="StatusStatusTypes">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatusTypes_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="StatusStatusTypes" Type="Self.StatusStatusTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="StatusStatusTypes">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_Division">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_Location">
+    <End Role="Locations" Type="Self.Locations" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_Origin">
+    <End Role="Origins" Type="Self.Origins" Multiplicity="1" />
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Origins">
+        <PropertyRef Name="OriginID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="OriginID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_StoreStatus">
+    <End Role="StoreStatus" Type="Self.StoreStatus" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StoreStatus">
+        <PropertyRef Name="StoreStatusID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="StoreStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreAdjustments_AdjustmentDescriptions">
+    <End Role="AdjustmentDescriptions" Type="Self.AdjustmentDescriptions" Multiplicity="1" />
+    <End Role="StoreAdjustments" Type="Self.StoreAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdjustmentDescriptions">
+        <PropertyRef Name="AdjustmentDescriptionID" />
+      </Principal>
+      <Dependent Role="StoreAdjustments">
+        <PropertyRef Name="AdjustmentDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreAdjustments_AdjustmentTypes">
+    <End Role="AdjustmentTypes" Type="Self.AdjustmentTypes" Multiplicity="1" />
+    <End Role="StoreAdjustments" Type="Self.StoreAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdjustmentTypes">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Principal>
+      <Dependent Role="StoreAdjustments">
+        <PropertyRef Name="AdjustmentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreCharacteristics_Location">
+    <End Role="Locations" Type="Self.Locations" Multiplicity="1" />
+    <End Role="StoreCharacteristics" Type="Self.StoreCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="StoreCharacteristics">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreCharacteristics_Store1">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="StoreCharacteristics" Type="Self.StoreCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="StoreCharacteristics">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreCharacteristics_StoreCharacteristicType">
+    <End Role="StoreCharacteristicTypes" Type="Self.StoreCharacteristicTypes" Multiplicity="1" />
+    <End Role="StoreCharacteristics" Type="Self.StoreCharacteristics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StoreCharacteristicTypes">
+        <PropertyRef Name="StoreCharacteristicTypeID" />
+      </Principal>
+      <Dependent Role="StoreCharacteristics">
+        <PropertyRef Name="StoreCharacteristicTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreHierarchy_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="StoreHierarchies" Type="Self.StoreHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="StoreHierarchies">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreHierarchy_HierarchyLevel">
+    <End Role="HierarchyLevels" Type="Self.HierarchyLevels" Multiplicity="1" />
+    <End Role="StoreHierarchies" Type="Self.StoreHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HierarchyLevels">
+        <PropertyRef Name="HierarchyLevelID" />
+      </Principal>
+      <Dependent Role="StoreHierarchies">
+        <PropertyRef Name="HierarchyLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreHierarchy_HierarchyName">
+    <End Role="HierarchyNames" Type="Self.HierarchyNames" Multiplicity="1" />
+    <End Role="StoreHierarchies" Type="Self.StoreHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HierarchyNames">
+        <PropertyRef Name="HierarchyNameID" />
+      </Principal>
+      <Dependent Role="StoreHierarchies">
+        <PropertyRef Name="HierarchyNameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreHierarchy_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="StoreHierarchies" Type="Self.StoreHierarchies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="StoreHierarchies">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StoreHistory_HistoryType">
+    <End Role="HistoryTypes" Type="Self.HistoryTypes" Multiplicity="1" />
+    <End Role="StoreHistories" Type="Self.StoreHistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HistoryTypes">
+        <PropertyRef Name="HistoryTypeID" />
+      </Principal>
+      <Dependent Role="StoreHistories">
+        <PropertyRef Name="HistoryTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StorePerformanceAdjustments_Store1">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="StoreAdjustments" Type="Self.StoreAdjustments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="StoreAdjustments">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBAccounts_Division">
+    <End Role="Divisions" Type="Self.Divisions" Multiplicity="1" />
+    <End Role="TBAccounts" Type="Self.TBAccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Divisions">
+        <PropertyRef Name="DivisionID" />
+      </Principal>
+      <Dependent Role="TBAccounts">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traffic_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="Traffic" Type="Self.Traffic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Traffic">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrafficDetail_Store">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="1" />
+    <End Role="TrafficDetails" Type="Self.TrafficDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="TrafficDetails">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TechBrandsModelStoreContainer">
+    <EntitySet Name="AdjustmentDescriptions" EntityType="Self.AdjustmentDescriptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdjustmentTypes" EntityType="Self.AdjustmentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Aliases" EntityType="Self.Aliases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AliasTypes" EntityType="Self.AliasTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Calendar" EntityType="Self.Calendar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalendarTypes" EntityType="Self.CalendarTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Collections" EntityType="Self.Collections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerAddress" EntityType="Self.CustomerAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerContact" EntityType="Self.CustomerContact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerTimeline" EntityType="Self.CustomerTimeline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataTypes" EntityType="Self.DataTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerCodeCharacteristics" EntityType="Self.DealerCodeCharacteristics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerCodeCharacteristicTypes" EntityType="Self.DealerCodeCharacteristicTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerCodes" EntityType="Self.DealerCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerCodeStatus" EntityType="Self.DealerCodeStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerCodeTypes" EntityType="Self.DealerCodeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerHierarchies" EntityType="Self.DealerHierarchies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerHierarchyLevels" EntityType="Self.DealerHierarchyLevels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealerHierarchyNames" EntityType="Self.DealerHierarchyNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefinitionHierarchies" EntityType="Self.DefinitionHierarchies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Definitions" EntityType="Self.Definitions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DivisionAdjustments" EntityType="Self.DivisionAdjustments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Divisions" EntityType="Self.Divisions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Elements" EntityType="Self.Elements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeAdjustments" EntityType="Self.EmployeeAdjustments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeStatus" EntityType="Self.EmployeeStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeStatusHistories" EntityType="Self.EmployeeStatusHistories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTimeDetails" EntityType="Self.EmployeeTimeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Entities" EntityType="Self.Entities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityElements" EntityType="Self.EntityElements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityHistories" EntityType="Self.EntityHistories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityRelationshipHistories" EntityType="Self.EntityRelationshipHistories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityRelationships" EntityType="Self.EntityRelationships" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GoalDescriptions" EntityType="Self.GoalDescriptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Goals" EntityType="Self.Goals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GoalWeights" EntityType="Self.GoalWeights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HierarchyLevels" EntityType="Self.HierarchyLevels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HierarchyNames" EntityType="Self.HierarchyNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryTypes" EntityType="Self.HistoryTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Intervals" EntityType="Self.Intervals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InventoryIdentificationCodes" EntityType="Self.InventoryIdentificationCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceActivities" EntityType="Self.InvoiceActivities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceAdjustments" EntityType="Self.InvoiceAdjustments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LineItems" EntityType="Self.LineItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LineItemTypes" EntityType="Self.LineItemTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MetricDescriptions" EntityType="Self.MetricDescriptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metrics" EntityType="Self.Metrics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Origins" EntityType="Self.Origins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Processes" EntityType="Self.Processes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelationshipDefinitions" EntityType="Self.RelationshipDefinitions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skus" EntityType="Self.Skus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusProcesses" EntityType="Self.StatusProcesses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusStatusTypes" EntityType="Self.StatusStatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusTypes" EntityType="Self.StatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreAdjustments" EntityType="Self.StoreAdjustments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreCharacteristics" EntityType="Self.StoreCharacteristics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreCharacteristicTypes" EntityType="Self.StoreCharacteristicTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreHierarchies" EntityType="Self.StoreHierarchies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreHistories" EntityType="Self.StoreHistories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stores" EntityType="Self.Stores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreStatus" EntityType="Self.StoreStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrafficDetails" EntityType="Self.TrafficDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeightTypes" EntityType="Self.WeightTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Traffic" EntityType="Self.Traffic" Schema="dw" store:Type="Tables" />
+    <EntitySet Name="AccountLevels" EntityType="Self.AccountLevels" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="CostCenters" EntityType="Self.CostCenters" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="FTE" EntityType="Self.FTE" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="GLAccountDetails" EntityType="Self.GLAccountDetails" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="GLAccountTypes" EntityType="Self.GLAccountTypes" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="TBAccounts" EntityType="Self.TBAccounts" Schema="finance" store:Type="Tables" />
+    <EntitySet Name="EmployeeCharacteristics" EntityType="Self.EmployeeCharacteristics" Schema="hr" store:Type="Tables" />
+    <EntitySet Name="EmployeeCharacteristicTypes" EntityType="Self.EmployeeCharacteristicTypes" Schema="hr" store:Type="Tables" />
+    <EntitySet Name="AddressAbbr" EntityType="Self.AddressAbbr" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AddressAbbr].[AddressAbbrID] AS [AddressAbbrID], 
+    [AddressAbbr].[FindThis] AS [FindThis], 
+    [AddressAbbr].[ReplaceWith] AS [ReplaceWith]
+    FROM [dbo].[AddressAbbr] AS [AddressAbbr]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CarrierDealerCodes" EntityType="Self.CarrierDealerCodes" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [CarrierDealerCodes].[DealerCodeID] AS [DealerCodeID], 
+    [CarrierDealerCodes].[DealerCode] AS [DealerCode], 
+    [CarrierDealerCodes].[StoreID] AS [StoreID], 
+    [CarrierDealerCodes].[AcctStoreID] AS [AcctStoreID], 
+    [CarrierDealerCodes].[DealerCodeType] AS [DealerCodeType], 
+    [CarrierDealerCodes].[DealerCodeStatus] AS [DealerCodeStatus]
+    FROM [dw].[CarrierDealerCodes] AS [CarrierDealerCodes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CarrierMetrics" EntityType="Self.CarrierMetrics" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [CarrierMetrics].[MetricID] AS [MetricID], 
+    [CarrierMetrics].[MetricType] AS [MetricType], 
+    [CarrierMetrics].[MetricDescription] AS [MetricDescription], 
+    [CarrierMetrics].[MetricValue] AS [MetricValue], 
+    [CarrierMetrics].[Date] AS [Date], 
+    [CarrierMetrics].[DealerCode] AS [DealerCode], 
+    [CarrierMetrics].[DealerCodeID] AS [DealerCodeID], 
+    [CarrierMetrics].[StoreID] AS [StoreID], 
+    [CarrierMetrics].[CarrierMetricType] AS [CarrierMetricType]
+    FROM [dw].[CarrierMetrics] AS [CarrierMetrics]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DailyPayByStore" EntityType="Self.DailyPayByStore" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [DailyPayByStore].[StoreID] AS [StoreID], 
+    [DailyPayByStore].[Date] AS [Date], 
+    [DailyPayByStore].[PayGroup] AS [PayGroup], 
+    [DailyPayByStore].[Pay] AS [Pay]
+    FROM [dw].[DailyPayByStore] AS [DailyPayByStore]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employees1" EntityType="Self.Employees1" store:Type="Tables" store:Schema="dw" store:Name="Employees">
+      <DefiningQuery>SELECT 
+    [Employees1].[EmployeeID] AS [EmployeeID], 
+    [Employees1].[EmployeeName] AS [EmployeeName], 
+    [Employees1].[PrimaryStoreID] AS [PrimaryStoreID], 
+    [Employees1].[DivisionID] AS [DivisionID], 
+    [Employees1].[CreatedDate] AS [CreatedDate], 
+    [Employees1].[UpdateDate] AS [UpdateDate], 
+    [Employees1].[Status] AS [Status], 
+    [Employees1].[CommissionGroup] AS [CommissionGroup], 
+    [Employees1].[EmployeeType] AS [EmployeeType], 
+    [Employees1].[OrganizationRole] AS [OrganizationRole], 
+    [Employees1].[SecurityRole] AS [SecurityRole], 
+    [Employees1].[Title] AS [Title], 
+    [Employees1].[WorkdayID] AS [WorkdayID]
+    FROM [dw].[Employees] AS [Employees1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmployeeSalesKPIs" EntityType="Self.EmployeeSalesKPIs" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [EmployeeSalesKPIs].[EmployeeID] AS [EmployeeID], 
+    [EmployeeSalesKPIs].[StoreID] AS [StoreID], 
+    [EmployeeSalesKPIs].[DivisionID] AS [DivisionID], 
+    [EmployeeSalesKPIs].[EmployeeStatus] AS [EmployeeStatus], 
+    [EmployeeSalesKPIs].[ActivityDate] AS [ActivityDate], 
+    [EmployeeSalesKPIs].[GrossProfit] AS [GrossProfit], 
+    [EmployeeSalesKPIs].[Opps] AS [Opps], 
+    [EmployeeSalesKPIs].[GrossAdds] AS [GrossAdds], 
+    [EmployeeSalesKPIs].[Upgrades] AS [Upgrades], 
+    [EmployeeSalesKPIs].[StrategicProducts] AS [StrategicProducts], 
+    [EmployeeSalesKPIs].[DLife] AS [DLife], 
+    [EmployeeSalesKPIs].[AdvancedTV] AS [AdvancedTV], 
+    [EmployeeSalesKPIs].[CRU] AS [CRU], 
+    [EmployeeSalesKPIs].[GoPhone] AS [GoPhone], 
+    [EmployeeSalesKPIs].[AccessoryGP] AS [AccessoryGP], 
+    [EmployeeSalesKPIs].[PostPaidGrossAdds] AS [PostPaidGrossAdds], 
+    [EmployeeSalesKPIs].[Wired] AS [Wired]
+    FROM [dw].[EmployeeSalesKPIs] AS [EmployeeSalesKPIs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmployeeSalesKPIs2" EntityType="Self.EmployeeSalesKPIs2" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [EmployeeSalesKPIs2].[EmployeeID] AS [EmployeeID], 
+    [EmployeeSalesKPIs2].[StoreID] AS [StoreID], 
+    [EmployeeSalesKPIs2].[InvoiceDate] AS [InvoiceDate], 
+    [EmployeeSalesKPIs2].[KPI] AS [KPI], 
+    [EmployeeSalesKPIs2].[KPIValue] AS [KPIValue]
+    FROM [dw].[EmployeeSalesKPIs2] AS [EmployeeSalesKPIs2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GoalsByDay" EntityType="Self.GoalsByDay" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [GoalsByDay].[GoalID] AS [GoalID], 
+    [GoalsByDay].[Date] AS [Date], 
+    [GoalsByDay].[DailyGoal] AS [DailyGoal], 
+    [GoalsByDay].[MonthlyGoal] AS [MonthlyGoal], 
+    [GoalsByDay].[GoalType] AS [GoalType], 
+    [GoalsByDay].[GoalDescription] AS [GoalDescription], 
+    [GoalsByDay].[GoalWeight] AS [GoalWeight], 
+    [GoalsByDay].[WeightType] AS [WeightType], 
+    [GoalsByDay].[StoreID] AS [StoreID]
+    FROM [dw].[GoalsByDay] AS [GoalsByDay]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SalesCouponDetail" EntityType="Self.SalesCouponDetail" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [SalesCouponDetail].[InvoiceReferenceID] AS [InvoiceReferenceID], 
+    [SalesCouponDetail].[ActivityDateTime] AS [ActivityDateTime], 
+    [SalesCouponDetail].[SkuID] AS [SkuID], 
+    [SalesCouponDetail].[Profit] AS [Profit], 
+    [SalesCouponDetail].[Quantity] AS [Quantity], 
+    [SalesCouponDetail].[Revenue] AS [Revenue]
+    FROM [dw].[SalesCouponDetail] AS [SalesCouponDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SalesDetail" EntityType="Self.SalesDetail" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [SalesDetail].[InvoiceID] AS [InvoiceID], 
+    [SalesDetail].[DivisionID] AS [DivisionID], 
+    [SalesDetail].[InvoiceNumber] AS [InvoiceNumber], 
+    [SalesDetail].[InvoiceActivityID] AS [InvoiceActivityID], 
+    [SalesDetail].[InvoiceReferenceID] AS [InvoiceReferenceID], 
+    [SalesDetail].[ActivityDateTime] AS [ActivityDateTime], 
+    [SalesDetail].[InvoiceDate] AS [InvoiceDate], 
+    [SalesDetail].[EmployeeID] AS [EmployeeID], 
+    [SalesDetail].[StoreID] AS [StoreID], 
+    [SalesDetail].[SkuID] AS [SkuID], 
+    [SalesDetail].[Profit] AS [Profit], 
+    [SalesDetail].[Quantity] AS [Quantity], 
+    [SalesDetail].[Revenue] AS [Revenue], 
+    [SalesDetail].[CustomerID] AS [CustomerID], 
+    [SalesDetail].[ReferenceSkuID] AS [ReferenceSkuID]
+    FROM [dw].[SalesDetail] AS [SalesDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SalesKPIs" EntityType="Self.SalesKPIs" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [SalesKPIs].[StoreID] AS [StoreID], 
+    [SalesKPIs].[DivisionID] AS [DivisionID], 
+    [SalesKPIs].[ActivityDate] AS [ActivityDate], 
+    [SalesKPIs].[GrossProfit] AS [GrossProfit], 
+    [SalesKPIs].[Opps] AS [Opps], 
+    [SalesKPIs].[GrossAdds] AS [GrossAdds], 
+    [SalesKPIs].[Upgrades] AS [Upgrades], 
+    [SalesKPIs].[StrategicProducts] AS [StrategicProducts], 
+    [SalesKPIs].[DLife] AS [DLife], 
+    [SalesKPIs].[AdvancedTV] AS [AdvancedTV], 
+    [SalesKPIs].[CRU] AS [CRU], 
+    [SalesKPIs].[GoPhone] AS [GoPhone], 
+    [SalesKPIs].[AccessoryGP] AS [AccessoryGP], 
+    [SalesKPIs].[PostPaidGrossAdds] AS [PostPaidGrossAdds], 
+    [SalesKPIs].[Wired] AS [Wired], 
+    [SalesKPIs].[Traffic] AS [Traffic], 
+    [SalesKPIs].[Wearables] AS [Wearables], 
+    [SalesKPIs].[UverseUnits] AS [UverseUnits], 
+    [SalesKPIs].[TotalPhones] AS [TotalPhones], 
+    [SalesKPIs].[TabletUnits] AS [TabletUnits], 
+    [SalesKPIs].[TabletData] AS [TabletData], 
+    [SalesKPIs].[Smartphones] AS [Smartphones], 
+    [SalesKPIs].[FeatUnits] AS [FeatUnits], 
+    [SalesKPIs].[RevenueNoCoupons] AS [RevenueNoCoupons], 
+    [SalesKPIs].[NonContract] AS [NonContract], 
+    [SalesKPIs].[Next] AS [Next], 
+    [SalesKPIs].[LG G5] AS [LG G5], 
+    [SalesKPIs].[iOS] AS [iOS], 
+    [SalesKPIs].[IntegratedProducts] AS [IntegratedProducts], 
+    [SalesKPIs].[HYLA] AS [HYLA], 
+    [SalesKPIs].[GadgetGuardGP] AS [GadgetGuardGP], 
+    [SalesKPIs].[FeatureGP] AS [FeatureGP], 
+    [SalesKPIs].[DirecTVUnits] AS [DirecTVUnits], 
+    [SalesKPIs].[BYOD] AS [BYOD], 
+    [SalesKPIs].[AndroidUnits] AS [AndroidUnits], 
+    [SalesKPIs].[AllCoupons] AS [AllCoupons], 
+    [SalesKPIs].[AccessoryUnits] AS [AccessoryUnits], 
+    [SalesKPIs].[AccEligOpps] AS [AccEligOpps], 
+    [SalesKPIs].[AccessoryCoupons] AS [AccessoryCoupons], 
+    [SalesKPIs].[RawGrossProfit] AS [RawGrossProfit], 
+    [SalesKPIs].[NoniOSSmartPhones] AS [NoniOSSmartPhones], 
+    [SalesKPIs].[HSI] AS [HSI], 
+    [SalesKPIs].[MobileInsurance] AS [MobileInsurance]
+    FROM [dw].[SalesKPIs] AS [SalesKPIs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SisenseInvoiceFlags" EntityType="Self.SisenseInvoiceFlags" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [SisenseInvoiceFlags].[DivisionID] AS [DivisionID], 
+    [SisenseInvoiceFlags].[InvoiceNumber] AS [InvoiceNumber], 
+    [SisenseInvoiceFlags].[SMServiceFlag] AS [SMServiceFlag], 
+    [SisenseInvoiceFlags].[smMobilityiPadFlag] AS [smMobilityiPadFlag], 
+    [SisenseInvoiceFlags].[smMobilityiPhoneFlag] AS [smMobilityiPhoneFlag]
+    FROM [dw].[SisenseInvoiceFlags] AS [SisenseInvoiceFlags]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Skus1" EntityType="Self.Skus1" store:Type="Tables" store:Schema="dw" store:Name="Skus">
+      <DefiningQuery>SELECT 
+    [Skus1].[SkuID] AS [SkuID], 
+    [Skus1].[Sku] AS [Sku], 
+    [Skus1].[ParentProductID] AS [ParentProductID], 
+    [Skus1].[ProductDescription] AS [ProductDescription], 
+    [Skus1].[ProductEnabled] AS [ProductEnabled], 
+    [Skus1].[Manufacturer] AS [Manufacturer], 
+    [Skus1].[LevelOne] AS [LevelOne], 
+    [Skus1].[LevelTwo] AS [LevelTwo], 
+    [Skus1].[LevelThree] AS [LevelThree], 
+    [Skus1].[LevelFour] AS [LevelFour], 
+    [Skus1].[LevelFive] AS [LevelFive], 
+    [Skus1].[LevelSix] AS [LevelSix], 
+    [Skus1].[LevelSeven] AS [LevelSeven], 
+    [Skus1].[LevelEight] AS [LevelEight], 
+    [Skus1].[DivisionID] AS [DivisionID]
+    FROM [dw].[Skus] AS [Skus1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Stores1" EntityType="Self.Stores1" store:Type="Tables" store:Schema="dw" store:Name="Stores">
+      <DefiningQuery>SELECT 
+    [Stores1].[StoreID] AS [StoreID], 
+    [Stores1].[DivisionID] AS [DivisionID], 
+    [Stores1].[Store] AS [Store], 
+    [Stores1].[StoreNumber] AS [StoreNumber], 
+    [Stores1].[StoreName] AS [StoreName], 
+    [Stores1].[Address] AS [Address], 
+    [Stores1].[City] AS [City], 
+    [Stores1].[State] AS [State], 
+    [Stores1].[Zip] AS [Zip], 
+    [Stores1].[Timezone] AS [Timezone], 
+    [Stores1].[Latitude] AS [Latitude], 
+    [Stores1].[Longitude] AS [Longitude], 
+    [Stores1].[Backdoor] AS [Backdoor], 
+    [Stores1].[Billpay] AS [Billpay], 
+    [Stores1].[ClosedDate] AS [ClosedDate], 
+    [Stores1].[DigitalLife] AS [DigitalLife], 
+    [Stores1].[StoreType] AS [StoreType], 
+    [Stores1].[OpenDate] AS [OpenDate], 
+    [Stores1].[OpenSunday] AS [OpenSunday], 
+    [Stores1].[Tier] AS [Tier], 
+    [Stores1].[Uverse] AS [Uverse], 
+    [Stores1].[Wired] AS [Wired], 
+    [Stores1].[District] AS [District], 
+    [Stores1].[Region] AS [Region], 
+    [Stores1].[Market] AS [Market], 
+    [Stores1].[Origin] AS [Origin], 
+    [Stores1].[StoreStatus] AS [StoreStatus]
+    FROM [dw].[Stores] AS [Stores1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="StoreSalesKPIs" EntityType="Self.StoreSalesKPIs" store:Type="Tables" store:Schema="dw">
+      <DefiningQuery>SELECT 
+    [StoreSalesKPIs].[StoreID] AS [StoreID], 
+    [StoreSalesKPIs].[InvoiceDate] AS [InvoiceDate], 
+    [StoreSalesKPIs].[KPI] AS [KPI], 
+    [StoreSalesKPIs].[KPIValue] AS [KPIValue]
+    FROM [dw].[StoreSalesKPIs] AS [StoreSalesKPIs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RQCardTypes" EntityType="Self.RQCardTypes" store:Type="Tables" store:Schema="staging">
+      <DefiningQuery>SELECT 
+    [RQCardTypes].[CardTypeID] AS [CardTypeID], 
+    [RQCardTypes].[FullName] AS [FullName], 
+    [RQCardTypes].[Mnemonic] AS [Mnemonic], 
+    [RQCardTypes].[AccountNumberLength] AS [AccountNumberLength], 
+    [RQCardTypes].[CvvLength] AS [CvvLength], 
+    [RQCardTypes].[AccessedDate] AS [AccessedDate]
+    FROM [staging].[RQCardTypes] AS [RQCardTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RQEntryTypes" EntityType="Self.RQEntryTypes" store:Type="Tables" store:Schema="staging">
+      <DefiningQuery>SELECT 
+    [RQEntryTypes].[EntryTypeID] AS [EntryTypeID], 
+    [RQEntryTypes].[EntryTypeDescription] AS [EntryTypeDescription], 
+    [RQEntryTypes].[Message] AS [Message], 
+    [RQEntryTypes].[AccessedDate] AS [AccessedDate]
+    FROM [staging].[RQEntryTypes] AS [RQEntryTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RQLocations" EntityType="Self.RQLocations" store:Type="Tables" store:Schema="staging">
+      <DefiningQuery>SELECT 
+    [RQLocations].[StoreID] AS [StoreID], 
+    [RQLocations].[StoreName] AS [StoreName], 
+    [RQLocations].[Disabled] AS [Disabled], 
+    [RQLocations].[Abbreviation] AS [Abbreviation], 
+    [RQLocations].[ManagerEmployeeID] AS [ManagerEmployeeID], 
+    [RQLocations].[ManagerCommissionable] AS [ManagerCommissionable], 
+    [RQLocations].[Address] AS [Address], 
+    [RQLocations].[City] AS [City], 
+    [RQLocations].[StateProv] AS [StateProv], 
+    [RQLocations].[ZipPostal] AS [ZipPostal], 
+    [RQLocations].[Country] AS [Country], 
+    [RQLocations].[PhoneNumber] AS [PhoneNumber], 
+    [RQLocations].[FaxNumber] AS [FaxNumber], 
+    [RQLocations].[DistrictName] AS [DistrictName], 
+    [RQLocations].[RegionName] AS [RegionName], 
+    [RQLocations].[ChannelName] AS [ChannelName], 
+    [RQLocations].[StoreType] AS [StoreType], 
+    [RQLocations].[GLCode] AS [GLCode], 
+    [RQLocations].[SquareFootage] AS [SquareFootage], 
+    [RQLocations].[LocationCode] AS [LocationCode], 
+    [RQLocations].[Latitude] AS [Latitude], 
+    [RQLocations].[Longitude] AS [Longitude], 
+    [RQLocations].[AddressVerified] AS [AddressVerified], 
+    [RQLocations].[TimeZone] AS [TimeZone], 
+    [RQLocations].[AdjustDST] AS [AdjustDST], 
+    [RQLocations].[CashPolicy] AS [CashPolicy], 
+    [RQLocations].[MaxCashDrawer] AS [MaxCashDrawer], 
+    [RQLocations].[Serial_on_OE] AS [Serial_on_OE], 
+    [RQLocations].[Phone_on_OE] AS [Phone_on_OE], 
+    [RQLocations].[PAW_on_OE] AS [PAW_on_OE], 
+    [RQLocations].[Comment_on_OE] AS [Comment_on_OE], 
+    [RQLocations].[HideCustomerAddress] AS [HideCustomerAddress], 
+    [RQLocations].[EmailAddress] AS [EmailAddress], 
+    [RQLocations].[GeneralLocationNotes] AS [GeneralLocationNotes], 
+    [RQLocations].[SaleInvoiceComment] AS [SaleInvoiceComment], 
+    [RQLocations].[BankDetails] AS [BankDetails], 
+    [RQLocations].[Taxes] AS [Taxes], 
+    [RQLocations].[Rent] AS [Rent], 
+    [RQLocations].[PropertyTaxes] AS [PropertyTaxes], 
+    [RQLocations].[InsuranceAmount] AS [InsuranceAmount], 
+    [RQLocations].[OtherCharges] AS [OtherCharges], 
+    [RQLocations].[DepositTaken] AS [DepositTaken], 
+    [RQLocations].[LeaseNotes] AS [LeaseNotes], 
+    [RQLocations].[InsuranceCompany] AS [InsuranceCompany], 
+    [RQLocations].[LandlordNotes] AS [LandlordNotes], 
+    [RQLocations].[LandlordName] AS [LandlordName], 
+    [RQLocations].[UseLocationEmail] AS [UseLocationEmail], 
+    [RQLocations].[LocationEntityID] AS [LocationEntityID], 
+    [RQLocations].[AccessedDate] AS [AccessedDate], 
+    [RQLocations].[DivisionID] AS [DivisionID], 
+    [RQLocations].[LeaseStartDate] AS [LeaseStartDate], 
+    [RQLocations].[LeaseEndDate] AS [LeaseEndDate]
+    FROM [staging].[RQLocations] AS [RQLocations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RQRequestTypes" EntityType="Self.RQRequestTypes" store:Type="Tables" store:Schema="staging">
+      <DefiningQuery>SELECT 
+    [RQRequestTypes].[RequestTypeID] AS [RequestTypeID], 
+    [RQRequestTypes].[RequestTypeDescription] AS [RequestTypeDescription], 
+    [RQRequestTypes].[Message] AS [Message], 
+    [RQRequestTypes].[AccessedDate] AS [AccessedDate]
+    FROM [staging].[RQRequestTypes] AS [RQRequestTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RQSalesDetail" EntityType="Self.RQSalesDetail" store:Type="Tables" store:Schema="staging">
+      <DefiningQuery>SELECT 
+    [RQSalesDetail].[ChannelName] AS [ChannelName], 
+    [RQSalesDetail].[StoreID] AS [StoreID], 
+    [RQSalesDetail].[StoreName] AS [StoreName], 
+    [RQSalesDetail].[CustomerID] AS [CustomerID], 
+    [RQSalesDetail].[CustomerName] AS [CustomerName], 
+    [RQSalesDetail].[EmployeeID] AS [EmployeeID], 
+    [RQSalesDetail].[DateCreated] AS [DateCreated], 
+    [RQSalesDetail].[InvoiceNumber] AS [InvoiceNumber], 
+    [RQSalesDetail].[LineID] AS [LineID], 
+    [RQSalesDetail].[ProductSKU] AS [ProductSKU], 
+    [RQSalesDetail].[Price] AS [Price], 
+    [RQSalesDetail].[Cost] AS [Cost], 
+    [RQSalesDetail].[RQPriority] AS [RQPriority], 
+    [RQSalesDetail].[Quantity] AS [Quantity], 
+    [RQSalesDetail].[EmployeeName] AS [EmployeeName], 
+    [RQSalesDetail].[DivisionID] AS [DivisionID]
+    FROM [staging].[RQSalesDetail] AS [RQSalesDetail]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Alias_AliasType" Association="Self.FK_Alias_AliasType">
+      <End Role="AliasTypes" EntitySet="AliasTypes" />
+      <End Role="Aliases" EntitySet="Aliases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alias_Store1" Association="Self.FK_Alias_Store1">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Aliases" EntitySet="Aliases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Calendar_CalendarTypes" Association="Self.FK_Calendar_CalendarTypes">
+      <End Role="CalendarTypes" EntitySet="CalendarTypes" />
+      <End Role="Calendar" EntitySet="Calendar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostCenters_AccountLevel" Association="Self.FK_CostCenters_AccountLevel">
+      <End Role="AccountLevels" EntitySet="AccountLevels" />
+      <End Role="CostCenters" EntitySet="CostCenters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostCenters_Divisions" Association="Self.FK_CostCenters_Divisions">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="CostCenters" EntitySet="CostCenters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostCenters_HierarchyLevels" Association="Self.FK_CostCenters_HierarchyLevels">
+      <End Role="HierarchyLevels" EntitySet="HierarchyLevels" />
+      <End Role="CostCenters" EntitySet="CostCenters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostCenters_HierarchyNames" Association="Self.FK_CostCenters_HierarchyNames">
+      <End Role="HierarchyNames" EntitySet="HierarchyNames" />
+      <End Role="CostCenters" EntitySet="CostCenters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_Divisions" Association="Self.FK_Customers_Divisions">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerTimeline_CustomerAddress" Association="Self.FK_CustomerTimeline_CustomerAddress">
+      <End Role="CustomerAddress" EntitySet="CustomerAddress" />
+      <End Role="CustomerTimeline" EntitySet="CustomerTimeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerTimeline_CustomerContact" Association="Self.FK_CustomerTimeline_CustomerContact">
+      <End Role="CustomerContact" EntitySet="CustomerContact" />
+      <End Role="CustomerTimeline" EntitySet="CustomerTimeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerTimeline_Customers" Association="Self.FK_CustomerTimeline_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CustomerTimeline" EntitySet="CustomerTimeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodeCharacteristics_DealerCodeCharacteristicType" Association="Self.FK_DealerCodeCharacteristics_DealerCodeCharacteristicType">
+      <End Role="DealerCodeCharacteristicTypes" EntitySet="DealerCodeCharacteristicTypes" />
+      <End Role="DealerCodeCharacteristics" EntitySet="DealerCodeCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodeCharacteristics_DealerCodes" Association="Self.FK_DealerCodeCharacteristics_DealerCodes">
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+      <End Role="DealerCodeCharacteristics" EntitySet="DealerCodeCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodes_DealerCodeStatus" Association="Self.FK_DealerCodes_DealerCodeStatus">
+      <End Role="DealerCodeStatus" EntitySet="DealerCodeStatus" />
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodes_DealerCodeType" Association="Self.FK_DealerCodes_DealerCodeType">
+      <End Role="DealerCodeTypes" EntitySet="DealerCodeTypes" />
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodes_Origin" Association="Self.FK_DealerCodes_Origin">
+      <End Role="Origins" EntitySet="Origins" />
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerCodes_Store" Association="Self.FK_DealerCodes_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerHierarchy_DealerCodes" Association="Self.FK_DealerHierarchy_DealerCodes">
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+      <End Role="DealerHierarchies" EntitySet="DealerHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerHierarchy_DealerHierarchyLevel" Association="Self.FK_DealerHierarchy_DealerHierarchyLevel">
+      <End Role="DealerHierarchyLevels" EntitySet="DealerHierarchyLevels" />
+      <End Role="DealerHierarchies" EntitySet="DealerHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerHierarchy_DealerHierarchyName" Association="Self.FK_DealerHierarchy_DealerHierarchyName">
+      <End Role="DealerHierarchyNames" EntitySet="DealerHierarchyNames" />
+      <End Role="DealerHierarchies" EntitySet="DealerHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DefinitionRelationships_Collections" Association="Self.FK_DefinitionRelationships_Collections">
+      <End Role="Collections" EntitySet="Collections" />
+      <End Role="DefinitionHierarchies" EntitySet="DefinitionHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DefinitionRelationships_Definitions" Association="Self.FK_DefinitionRelationships_Definitions">
+      <End Role="Definitions" EntitySet="Definitions" />
+      <End Role="DefinitionHierarchies" EntitySet="DefinitionHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DefinitionRelationships_Definitions1" Association="Self.FK_DefinitionRelationships_Definitions1">
+      <End Role="Definitions" EntitySet="Definitions" />
+      <End Role="DefinitionHierarchies" EntitySet="DefinitionHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DivisionAdjustments_AdjustmentDescriptions" Association="Self.FK_DivisionAdjustments_AdjustmentDescriptions">
+      <End Role="AdjustmentDescriptions" EntitySet="AdjustmentDescriptions" />
+      <End Role="DivisionAdjustments" EntitySet="DivisionAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DivisionAdjustments_AdjustmentTypes" Association="Self.FK_DivisionAdjustments_AdjustmentTypes">
+      <End Role="AdjustmentTypes" EntitySet="AdjustmentTypes" />
+      <End Role="DivisionAdjustments" EntitySet="DivisionAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Division" Association="Self.FK_Employee_Division">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeStatus" Association="Self.FK_Employee_EmployeeStatus">
+      <End Role="EmployeeStatus" EntitySet="EmployeeStatus" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Origin" Association="Self.FK_Employee_Origin">
+      <End Role="Origins" EntitySet="Origins" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Store" Association="Self.FK_Employee_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAdjustment_Employee" Association="Self.FK_EmployeeAdjustment_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeeAdjustments" EntitySet="EmployeeAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAdjustment_EmployeeAdjustmentType" Association="Self.FK_EmployeeAdjustment_EmployeeAdjustmentType">
+      <End Role="AdjustmentTypes" EntitySet="AdjustmentTypes" />
+      <End Role="EmployeeAdjustments" EntitySet="EmployeeAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAdjustment_Store" Association="Self.FK_EmployeeAdjustment_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="EmployeeAdjustments" EntitySet="EmployeeAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeCharacteristics_Employee" Association="Self.FK_EmployeeCharacteristics_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeeCharacteristics" EntitySet="EmployeeCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeCharacteristics_EmployeeCharacteristicType" Association="Self.FK_EmployeeCharacteristics_EmployeeCharacteristicType">
+      <End Role="EmployeeCharacteristicTypes" EntitySet="EmployeeCharacteristicTypes" />
+      <End Role="EmployeeCharacteristics" EntitySet="EmployeeCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeStatusHistory_Employee" Association="Self.FK_EmployeeStatusHistory_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeeStatusHistories" EntitySet="EmployeeStatusHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeStatusHistory_EmployeeStatus" Association="Self.FK_EmployeeStatusHistory_EmployeeStatus">
+      <End Role="EmployeeStatus" EntitySet="EmployeeStatus" />
+      <End Role="EmployeeStatusHistories" EntitySet="EmployeeStatusHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeTimeDetails_Employees" Association="Self.FK_EmployeeTimeDetails_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeeTimeDetails" EntitySet="EmployeeTimeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeTimeDetails_Stores" Association="Self.FK_EmployeeTimeDetails_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="EmployeeTimeDetails" EntitySet="EmployeeTimeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Entities_Collections" Association="Self.FK_Entities_Collections">
+      <End Role="Collections" EntitySet="Collections" />
+      <End Role="Entities" EntitySet="Entities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Entities_Divisions" Association="Self.FK_Entities_Divisions">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="Entities" EntitySet="Entities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Entities_Status" Association="Self.FK_Entities_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Entities" EntitySet="Entities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityHistories_Collections" Association="Self.FK_EntityHistories_Collections">
+      <End Role="Collections" EntitySet="Collections" />
+      <End Role="EntityHistories" EntitySet="EntityHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityHistories_Definitions" Association="Self.FK_EntityHistories_Definitions">
+      <End Role="Definitions" EntitySet="Definitions" />
+      <End Role="EntityHistories" EntitySet="EntityHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityHistories_Values" Association="Self.FK_EntityHistories_Values">
+      <End Role="Elements" EntitySet="Elements" />
+      <End Role="EntityHistories" EntitySet="EntityHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationshipHistories_Entities" Association="Self.FK_EntityRelationshipHistories_Entities">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="EntityRelationshipHistories" EntitySet="EntityRelationshipHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationshipHistories_Entities1" Association="Self.FK_EntityRelationshipHistories_Entities1">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="EntityRelationshipHistories" EntitySet="EntityRelationshipHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationshipHistories_RelationshipDefinitions" Association="Self.FK_EntityRelationshipHistories_RelationshipDefinitions">
+      <End Role="RelationshipDefinitions" EntitySet="RelationshipDefinitions" />
+      <End Role="EntityRelationshipHistories" EntitySet="EntityRelationshipHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationships_Entities" Association="Self.FK_EntityRelationships_Entities">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="EntityRelationships" EntitySet="EntityRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationships_Entities1" Association="Self.FK_EntityRelationships_Entities1">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="EntityRelationships" EntitySet="EntityRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityRelationships_RelationshipDefinitions" Association="Self.FK_EntityRelationships_RelationshipDefinitions">
+      <End Role="RelationshipDefinitions" EntitySet="RelationshipDefinitions" />
+      <End Role="EntityRelationships" EntitySet="EntityRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityValues_Definitions" Association="Self.FK_EntityValues_Definitions">
+      <End Role="Definitions" EntitySet="Definitions" />
+      <End Role="EntityElements" EntitySet="EntityElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityValues_Entities" Association="Self.FK_EntityValues_Entities">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="EntityElements" EntitySet="EntityElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntityValues_Values" Association="Self.FK_EntityValues_Values">
+      <End Role="Elements" EntitySet="Elements" />
+      <End Role="EntityElements" EntitySet="EntityElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FTE_Stores" Association="Self.FK_FTE_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="FTE" EntitySet="FTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLAccountDetail_CostCenters" Association="Self.FK_GLAccountDetail_CostCenters">
+      <End Role="CostCenters" EntitySet="CostCenters" />
+      <End Role="GLAccountDetails" EntitySet="GLAccountDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLAccountDetail_GLAccountType" Association="Self.FK_GLAccountDetail_GLAccountType">
+      <End Role="GLAccountTypes" EntitySet="GLAccountTypes" />
+      <End Role="GLAccountDetails" EntitySet="GLAccountDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLAccountDetail_TBAccounts" Association="Self.FK_GLAccountDetail_TBAccounts">
+      <End Role="TBAccounts" EntitySet="TBAccounts" />
+      <End Role="GLAccountDetails" EntitySet="GLAccountDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoalDescriptions_DataTypes" Association="Self.FK_GoalDescriptions_DataTypes">
+      <End Role="DataTypes" EntitySet="DataTypes" />
+      <End Role="GoalDescriptions" EntitySet="GoalDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Goals_GoalDescription" Association="Self.FK_Goals_GoalDescription">
+      <End Role="GoalDescriptions" EntitySet="GoalDescriptions" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Goals_GoalWeight" Association="Self.FK_Goals_GoalWeight">
+      <End Role="GoalWeights" EntitySet="GoalWeights" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Goals_Store1" Association="Self.FK_Goals_Store1">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoalWeight_WeightType" Association="Self.FK_GoalWeight_WeightType">
+      <End Role="WeightTypes" EntitySet="WeightTypes" />
+      <End Role="GoalWeights" EntitySet="GoalWeights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_InventoryIdentificationCodes" Association="Self.FK_Inventory_InventoryIdentificationCodes">
+      <End Role="InventoryIdentificationCodes" EntitySet="InventoryIdentificationCodes" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_InventoryIdentificationCodes1" Association="Self.FK_Inventory_InventoryIdentificationCodes1">
+      <End Role="InventoryIdentificationCodes" EntitySet="InventoryIdentificationCodes" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_InventoryIdentificationCodes2" Association="Self.FK_Inventory_InventoryIdentificationCodes2">
+      <End Role="InventoryIdentificationCodes" EntitySet="InventoryIdentificationCodes" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_InventoryIdentificationCodes3" Association="Self.FK_Inventory_InventoryIdentificationCodes3">
+      <End Role="InventoryIdentificationCodes" EntitySet="InventoryIdentificationCodes" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Skus" Association="Self.FK_Inventory_Skus">
+      <End Role="Skus" EntitySet="Skus" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Status" Association="Self.FK_Inventory_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Stores" Association="Self.FK_Inventory_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Vendors" Association="Self.FK_Inventory_Vendors">
+      <End Role="Vendors" EntitySet="Vendors" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceActivity_Employee" Association="Self.FK_InvoiceActivity_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="InvoiceActivities" EntitySet="InvoiceActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceActivity_Invoice" Association="Self.FK_InvoiceActivity_Invoice">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceActivities" EntitySet="InvoiceActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceActivity_Store" Association="Self.FK_InvoiceActivity_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="InvoiceActivities" EntitySet="InvoiceActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceAdjustments_Employee_EmployeeID" Association="Self.FK_InvoiceAdjustments_Employee_EmployeeID">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="InvoiceAdjustments" EntitySet="InvoiceAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceAdjustments_Invoice_InvoiceID" Association="Self.FK_InvoiceAdjustments_Invoice_InvoiceID">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceAdjustments" EntitySet="InvoiceAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoices_CustomerTimeline" Association="Self.FK_Invoices_CustomerTimeline">
+      <End Role="CustomerTimeline" EntitySet="CustomerTimeline" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineItem_InvoiceActivity" Association="Self.FK_LineItem_InvoiceActivity">
+      <End Role="InvoiceActivities" EntitySet="InvoiceActivities" />
+      <End Role="LineItems" EntitySet="LineItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineItems_LineItemTypes" Association="Self.FK_LineItems_LineItemTypes">
+      <End Role="LineItemTypes" EntitySet="LineItemTypes" />
+      <End Role="LineItems" EntitySet="LineItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineItems_Skus" Association="Self.FK_LineItems_Skus">
+      <End Role="Skus" EntitySet="Skus" />
+      <End Role="LineItems" EntitySet="LineItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MetricDescriptions_DataTypes" Association="Self.FK_MetricDescriptions_DataTypes">
+      <End Role="DataTypes" EntitySet="DataTypes" />
+      <End Role="MetricDescriptions" EntitySet="MetricDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metrics_DealerCodes" Association="Self.FK_Metrics_DealerCodes">
+      <End Role="DealerCodes" EntitySet="DealerCodes" />
+      <End Role="Metrics" EntitySet="Metrics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metrics_Intervals" Association="Self.FK_Metrics_Intervals">
+      <End Role="Intervals" EntitySet="Intervals" />
+      <End Role="Metrics" EntitySet="Metrics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Metrics_MetricDesc" Association="Self.FK_Metrics_MetricDesc">
+      <End Role="MetricDescriptions" EntitySet="MetricDescriptions" />
+      <End Role="Metrics" EntitySet="Metrics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelationshipDefinitions_Collections" Association="Self.FK_RelationshipDefinitions_Collections">
+      <End Role="Collections" EntitySet="Collections" />
+      <End Role="RelationshipDefinitions" EntitySet="RelationshipDefinitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelationshipDefinitions_Collections1" Association="Self.FK_RelationshipDefinitions_Collections1">
+      <End Role="Collections" EntitySet="Collections" />
+      <End Role="RelationshipDefinitions" EntitySet="RelationshipDefinitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skus_Division" Association="Self.FK_Skus_Division">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="Skus" EntitySet="Skus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatusProcesses_Processes" Association="Self.FK_StatusProcesses_Processes">
+      <End Role="Processes" EntitySet="Processes" />
+      <End Role="StatusProcesses" EntitySet="StatusProcesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatusProcesses_Status" Association="Self.FK_StatusProcesses_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="StatusProcesses" EntitySet="StatusProcesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatusStatusTypes_StatusTypes" Association="Self.FK_StatusStatusTypes_StatusTypes">
+      <End Role="StatusTypes" EntitySet="StatusTypes" />
+      <End Role="StatusStatusTypes" EntitySet="StatusStatusTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatusTypes_Status" Association="Self.FK_StatusTypes_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="StatusStatusTypes" EntitySet="StatusStatusTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_Division" Association="Self.FK_Store_Division">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_Location" Association="Self.FK_Store_Location">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_Origin" Association="Self.FK_Store_Origin">
+      <End Role="Origins" EntitySet="Origins" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_StoreStatus" Association="Self.FK_Store_StoreStatus">
+      <End Role="StoreStatus" EntitySet="StoreStatus" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreAdjustments_AdjustmentDescriptions" Association="Self.FK_StoreAdjustments_AdjustmentDescriptions">
+      <End Role="AdjustmentDescriptions" EntitySet="AdjustmentDescriptions" />
+      <End Role="StoreAdjustments" EntitySet="StoreAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreAdjustments_AdjustmentTypes" Association="Self.FK_StoreAdjustments_AdjustmentTypes">
+      <End Role="AdjustmentTypes" EntitySet="AdjustmentTypes" />
+      <End Role="StoreAdjustments" EntitySet="StoreAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreCharacteristics_Location" Association="Self.FK_StoreCharacteristics_Location">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="StoreCharacteristics" EntitySet="StoreCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreCharacteristics_Store1" Association="Self.FK_StoreCharacteristics_Store1">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="StoreCharacteristics" EntitySet="StoreCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreCharacteristics_StoreCharacteristicType" Association="Self.FK_StoreCharacteristics_StoreCharacteristicType">
+      <End Role="StoreCharacteristicTypes" EntitySet="StoreCharacteristicTypes" />
+      <End Role="StoreCharacteristics" EntitySet="StoreCharacteristics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreHierarchy_Employee" Association="Self.FK_StoreHierarchy_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="StoreHierarchies" EntitySet="StoreHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreHierarchy_HierarchyLevel" Association="Self.FK_StoreHierarchy_HierarchyLevel">
+      <End Role="HierarchyLevels" EntitySet="HierarchyLevels" />
+      <End Role="StoreHierarchies" EntitySet="StoreHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreHierarchy_HierarchyName" Association="Self.FK_StoreHierarchy_HierarchyName">
+      <End Role="HierarchyNames" EntitySet="HierarchyNames" />
+      <End Role="StoreHierarchies" EntitySet="StoreHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreHierarchy_Store" Association="Self.FK_StoreHierarchy_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="StoreHierarchies" EntitySet="StoreHierarchies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreHistory_HistoryType" Association="Self.FK_StoreHistory_HistoryType">
+      <End Role="HistoryTypes" EntitySet="HistoryTypes" />
+      <End Role="StoreHistories" EntitySet="StoreHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StorePerformanceAdjustments_Store1" Association="Self.FK_StorePerformanceAdjustments_Store1">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="StoreAdjustments" EntitySet="StoreAdjustments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBAccounts_Division" Association="Self.FK_TBAccounts_Division">
+      <End Role="Divisions" EntitySet="Divisions" />
+      <End Role="TBAccounts" EntitySet="TBAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traffic_Store" Association="Self.FK_Traffic_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Traffic" EntitySet="Traffic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrafficDetail_Store" Association="Self.FK_TrafficDetail_Store">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="TrafficDetails" EntitySet="TrafficDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

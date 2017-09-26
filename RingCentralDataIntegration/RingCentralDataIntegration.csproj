@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{327D2179-F7CA-4055-A63C-0137E8025638}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RingCentralDataIntegration</RootNamespace>
+    <AssemblyName>RingCentralDataIntegration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountLevel.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressAbbr.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustmentDescription.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustmentType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Alias.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AliasType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication.cs" />
+    <Compile Include="Calendar.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarrierDealerCode.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarrierMetric.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Collection.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CostCenter.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddress.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerContact.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTimeline.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DailyPayByStore.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="DataType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCode.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCodeCharacteristic.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCodeCharacteristicType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCodeStatu.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCodeType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerHierarchy.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerHierarchyLevel.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealerHierarchyName.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Definition.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefinitionHierarchy.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Division.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionAdjustment.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Element.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAdjustment.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCharacteristic.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCharacteristicType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employees1.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSalesKPI.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSalesKPIs2.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeStatu.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeStatusHistory.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTimeDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityElement.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityHistory.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityRelationship.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityRelationshipHistory.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionList.cs" />
+    <Compile Include="FTE.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GLAccountDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GLAccountType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Goal.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoalDescription.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoalsByDay.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoalWeight.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchyLevel.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchyName.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HttpRestClient.cs" />
+    <Compile Include="Interval.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryIdentificationCode.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceActivity.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceAdjustment.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JsonHandler.cs" />
+    <Compile Include="LineItem.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LineItemType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Metric.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetricDescription.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Origin.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelationshipDefinition.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQCardType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQEntryType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQLocation.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQRequestType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQSalesDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesCouponDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesKPI.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SisenseInvoiceFlag.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sku.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Skus1.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmtpHandler.cs" />
+    <Compile Include="Status.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusProcess.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusStatusType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreAdjustment.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCharacteristic.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCharacteristicType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHierarchy.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHistory.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stores1.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreSalesKPI.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StoreStatu.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBAccount.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechBrands.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechBrands.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechBrands.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechBrands.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechBrands.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Traffic.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrafficDetail.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WeightType.cs">
+      <DependentUpon>TechBrands.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="TechBrands.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TechBrands.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TechBrands.edmx.diagram">
+      <DependentUpon>TechBrands.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TechBrands.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TechBrands.Context.cs</LastGenOutput>
+      <DependentUpon>TechBrands.edmx</DependentUpon>
+    </Content>
+    <Content Include="TechBrands.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TechBrands.edmx</DependentUpon>
+      <LastGenOutput>TechBrands.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
